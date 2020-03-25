@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Learning</title>
-  <link rel="shortcut icon" href="/images/favicon.ico" >
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   <div class="container">
 <nav class="navbar navbar-expand-lg navbar-light stroke">
-    <img src="/images/logo.png" alt="Logo">
+    <a href="/"><img src="/images/logo.png" alt="Logo"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -19,21 +19,23 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#" id="color-link">Home</a>
+        <a class="nav-link" href="/" id="color-link">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" id="color-link">Notícias</a>
+        <a class="nav-link" href="/noticias" id="color-link">Notícias</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" id="color-link">Loja virtual</a>
+        <a class="nav-link" href="/ecomerce" id="color-link">Loja virtual</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" id="color-link">Locais</a>
+        <a class="nav-link" href="/evento" id="color-link">Locais</a>
       </li>
     </ul>
     <div class="btn-group" role="group" aria-label="Basic example">
       <button type="button" class="btn btn-secondary regis" id="btn-nav">Registrar</button>
+      <a href="login">
       <button type="button" class="btn btn-secondary regis" id="btn-nav">Login</button>
+    </a>
     </div>
   </div>
 </nav>

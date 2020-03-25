@@ -85,12 +85,16 @@ nav img{
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    
+    
 }
 
 footer{
     background-color: #9f7e69;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+       
 }
 footer p{
     font-size: 15;
@@ -113,7 +117,7 @@ nav.fill ul li a {
 }
 
 nav.stroke ul li a:after,
-nav.fill ul li a:after {
+nav.fill ul li a:after{
   position: absolute;
   bottom: 0;
   left: 0;
@@ -126,7 +130,7 @@ nav.fill ul li a:after {
   height: 1px;
 }
 
-nav.stroke ul li a:hover:after {
+nav.stroke ul li a:hover:after{
     width: 100%;
   }
 
@@ -134,6 +138,122 @@ nav.stroke ul li a:hover:after {
       background-color: #9f7e69;
       color: #f7ffe0;
   }
+  .new{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+  .news{
+      margin-top: 50px;
+      margin-bottom: 50px;
+      background-color: #9f7e69;
+      height: 200px;
+      border-radius: 10px;
+      
+  }
+  .info{
+      padding: 0px;
+      margin-left: 20px;
+      
+  }
+
+  .new h2{
+      text-transform: uppercase;
+      text-align: center;
+      color: #9f7e69;
+      letter-spacing: 2px;
+  }
+
+  .news img{
+      max-width: 224px;
+      max-height: 168px;
+  }
+
+  .news h3{
+      margin-top: 10px;
+      margin-left: 30px;
+      font-size: 25px;
+      color: #f7ffe0;
+  }
+
+  .news time{
+    margin-left: 30px;
+      font-size: 17px;
+      color: lightgray;
+  }
+
+  .news a:hover{
+      color: #f7ffe0;
+  }
+
+  .login{
+      width: 100vw;
+      height: 100vh;
+  }
+  .flut{
+      height: 71vh;
+  }
+
+  .box-login{
+      width: 350px;
+      height: 400px;
+      background-color: #d2bba0;
+      margin: 70px;
+      color: #f7ffe0;
+      
+      
+  }
+
+  .box-login h3{
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 30px;
+  }
+  .box-login label{
+      display: grid;
+  }
+  .box-login input{
+      width: 250px;
+      height: 30px;
+      margin-bottom: 15px;
+      border: solid #d2bba0 2px;
+      border-radius: 5px;
+  }
+  
+ .btn-login{
+     margin-top: 50px;
+     margin-left: 20px;
+ }
+
+ .btn-login a{
+     font-size: 17px;
+     letter-spacing: 1px;
+     margin-left: 20px;
+     color: #f7ffe0;
+ }
+ .btn-login a:hover{
+    color: #f7ffe0;
+}
+
+.btn-login button{
+    color: #f7ffe0;
+    background-color: #9f7e69;
+    border: #9f7e69;
+}
+.btn-login button:hover{
+    color: #9f7e69;
+    background-color: #f7ffe0;
+    border: #9f7e69;
+}
+
+  .marg{
+      margin-left: 15px;
+}
+
+
+
   
 
 
