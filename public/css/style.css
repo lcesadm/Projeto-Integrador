@@ -1,11 +1,11 @@
 body{
-    background-color: #f7ffe0;
+    background-color: #F0F0F2;
     font-family: sans-serif;
     margin: 0;
     padding: 0;
 }
 nav{
-    background-color: #9f7e69;
+    background-color: #B4CBD9;
     margin-bottom: 10px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -17,13 +17,14 @@ nav img{
     width: 120px;
 }
 #color-link{
-    color: #f7ffe0;
+    color: gray;
     letter-spacing: 2px;
 }
 #btn-nav{
-    background-color: #f7ffe0;
-    color: #9f7e69;
+    background-color: #D5E5F2;
+    color: gray;
     letter-spacing: 1px;
+    
 }
 
 .carousel-item img{
@@ -37,7 +38,7 @@ nav img{
 .about{
     margin-top: 50px;
     display: flex;
-    background-color: #ffeeef;
+    background-color: #D5E5F2;
     width: 750px;
     height: 430px;
     border-radius: 10px;
@@ -50,7 +51,7 @@ nav img{
 }
 .text{
     margin: 30px;
-    color: #9f7e69;
+    color: grey;
 }
 .text h2{
     text-transform: uppercase;
@@ -67,8 +68,8 @@ nav img{
     width: 310px;
     margin-top: 50px;
     margin-left: 50px;
-    background-color: #ffeeef;
-    color: #9f7e69;
+    background-color: #D5E5F2;
+    color: gray;
     height: 430px;
     border-radius: 10px;
 }
@@ -77,7 +78,7 @@ nav img{
     margin: 20px;
     text-align: center;
     text-transform: uppercase;
-    color: #9f7e69;
+    color: gray;
     font-size: 22px;
 }
 
@@ -91,7 +92,7 @@ nav img{
 }
 
 footer{
-    background-color: #9f7e69;
+    background-color: #B4CBD9;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
        
@@ -99,7 +100,7 @@ footer{
 footer p{
     font-size: 15;
     letter-spacing: 1px;
-    color: #f7ffe0;
+    color: gray;
     text-align: center;
     margin: 15px 15px 0;
    
@@ -126,7 +127,7 @@ nav.fill ul li a:after{
   width: 0%;
   content: '.';
   color: transparent;
-  background: #f7ffe0;
+  background:gray;
   height: 1px;
 }
 
@@ -135,8 +136,8 @@ nav.stroke ul li a:hover:after{
   }
 
   #btn-nav:hover {
-      background-color: #9f7e69;
-      color: #f7ffe0;
+      background-color: #79a197;
+      color: #ecffde;
   }
   .new{
     margin-top: 50px;
@@ -144,9 +145,8 @@ nav.stroke ul li a:hover:after{
 }
 
   .news{
-      margin-top: 50px;
-      margin-bottom: 50px;
-      background-color: #9f7e69;
+      margin-top: 20px;
+      background-color: #D5E5F2;
       height: 200px;
       border-radius: 10px;
       
@@ -160,7 +160,7 @@ nav.stroke ul li a:hover:after{
   .new h2{
       text-transform: uppercase;
       text-align: center;
-      color: #9f7e69;
+      color: gray;
       letter-spacing: 2px;
   }
 
@@ -173,7 +173,7 @@ nav.stroke ul li a:hover:after{
       margin-top: 10px;
       margin-left: 30px;
       font-size: 25px;
-      color: #f7ffe0;
+      color: gray;
   }
 
   .news time{
@@ -183,7 +183,7 @@ nav.stroke ul li a:hover:after{
   }
 
   .news a:hover{
-      color: #f7ffe0;
+      color: gray;
   }
 
   .login{
@@ -197,9 +197,9 @@ nav.stroke ul li a:hover:after{
   .box-login{
       width: 350px;
       height: 400px;
-      background-color: #d2bba0;
+      background-color: #B4CBD9;
       margin: 70px;
-      color: #f7ffe0;
+      color: gray;
       
       
   }
@@ -231,21 +231,21 @@ nav.stroke ul li a:hover:after{
      font-size: 17px;
      letter-spacing: 1px;
      margin-left: 20px;
-     color: #f7ffe0;
+     color: gray;
  }
  .btn-login a:hover{
-    color: #f7ffe0;
+    color: #EAF2DC;
 }
 
 .btn-login button{
-    color: #f7ffe0;
-    background-color: #9f7e69;
-    border: #9f7e69;
+    color: gray;
+    background-color: #D5E5F2;
+    border: gray 1px solid;
 }
 .btn-login button:hover{
-    color: #9f7e69;
-    background-color: #f7ffe0;
-    border: #9f7e69;
+    color: gray;
+    background-color: #F0F0F2;
+    border: gray 1px solid;
 }
 
   .marg{
