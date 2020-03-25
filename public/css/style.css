@@ -50,7 +50,6 @@ nav img{
     max-height: 300px;
 }
 .text{
-    margin: 30px;
     color: grey;
 }
 .text h2{
@@ -171,7 +170,7 @@ nav.stroke ul li a:hover:after{
 
   .news h3{
       margin-top: 10px;
-      margin-left: 30px;
+      margin-left: 5px;
       font-size: 25px;
       color: gray;
   }
@@ -254,7 +253,143 @@ nav.stroke ul li a:hover:after{
 
 
 
+  @media (max-width: 768px){
+
+    .equipe{
+        display: flex;
+        margin-bottom: 0px;
+    }
+    
+    .about{
+        margin-top: 50px;
+        display: flex;
+        background-color: #D5E5F2;
+        width: 450px;
+        height: 650px;
+        border-radius: 10px;
+    }
+    
+    .about img{
+        margin: 30px;
+        max-width: 200px;
+        max-height: 200px;
+    }
+    .text{
+        margin: 30px;
+        color: grey;
+    }
+    .text h2{
+        font-size: 22px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    .text p{
+        padding-top: 15px;
+        font-size: 14px;
+        text-align: justify;
+    }
+    
+    .noticias-mais-lidas{
+        width: 200px;
+        margin-top: 50px;
+        margin-left: 50px;
+        background-color: #D5E5F2;
+        color: gray;
+        height: 650px;
+        border-radius: 10px;
+    }
+    
+    .noticias-mais-lidas h2{
+        margin: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        color: gray;
+        font-size: 22px;
+    }
+
+  }
+
+  @media (max-width: 375px){
+
+    .equipe{
+        display: flex;
+        margin-bottom: 0px;
+    }
+    
+    .about{
+        margin-top: 50px;
+        margin-left: 20px;
+        display: flex;
+        background-color: #D5E5F2;
+        width: 330px;
+        height: 1000px;
+        border-radius: 10px;
+    }
+    
+    .about img{
+        margin: 30px;
+        max-width: 150px;
+        max-height: 150px;
+    }
+    .text{
+        margin: 30px;
+        color: grey;
+    }
+    .text h2{
+        font-size: 22px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    .text p{
+        padding-top: 15px;
+        font-size: 14px;
+        text-align: justify;
+    }
+    
+    .noticias-mais-lidas{
+        width: 200px;
+        margin-top: 50px;
+        margin-left: 50px;
+        background-color: #D5E5F2;
+        color: gray;
+        height: 650px;
+        border-radius: 10px;
+    }
+    
+    .noticias-mais-lidas h2{
+        margin: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        color: gray;
+        font-size: 22px;
+    }
+
+    .news img{
+        max-width: 100px;
+        max-height: 150px;
+    }
   
+    .news h3{
+        margin-top: 10px;
+        margin-left: 30px;
+        font-size: 14px;
+        color: gray;
+    }
+  
+    .news time{
+      margin-left: 30px;
+        font-size: 14px;
+        color: gray;
+    }
+    .news{
+        margin-top: 20px;
+        background-color: #D5E5F2;
+        height: 120px;
+        border-radius: 10px;
+        
+    }
+
+  }
 
 
 
