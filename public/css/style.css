@@ -1,0 +1,140 @@
+body{
+    background-color: #f7ffe0;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color: #9f7e69;
+    margin-bottom: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+nav img{
+    height: 65px;
+    width: 120px;
+}
+#color-link{
+    color: #f7ffe0;
+    letter-spacing: 2px;
+}
+#btn-nav{
+    background-color: #f7ffe0;
+    color: #9f7e69;
+    letter-spacing: 1px;
+}
+
+.carousel-item img{
+    max-height: 85vh;
+}
+.equipe{
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.about{
+    margin-top: 50px;
+    display: flex;
+    background-color: #ffeeef;
+    width: 750px;
+    height: 430px;
+    border-radius: 10px;
+}
+
+.about img{
+    margin: 30px;
+    max-width: 300px;
+    max-height: 300px;
+}
+.text{
+    margin: 30px;
+    color: #9f7e69;
+}
+.text h2{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.text p{
+    letter-spacing: 1px;
+    padding-top: 15px;
+    font-size: 17px;
+    text-align: justify;
+}
+
+.noticias-mais-lidas{
+    width: 310px;
+    margin-top: 50px;
+    margin-left: 50px;
+    background-color: #ffeeef;
+    color: #9f7e69;
+    height: 430px;
+    border-radius: 10px;
+}
+
+.noticias-mais-lidas h2{
+    margin: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #9f7e69;
+    font-size: 22px;
+}
+
+.foot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    background-color: #9f7e69;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+footer p{
+    font-size: 15;
+    letter-spacing: 1px;
+    color: #f7ffe0;
+    text-align: center;
+    margin: 15px 15px 0;
+   
+}
+
+footer img{
+    max-height: 65px;
+    max-width: 120px;
+}
+
+/* stroke */
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #f7ffe0;
+  height: 1px;
+}
+
+nav.stroke ul li a:hover:after {
+    width: 100%;
+  }
+
+  #btn-nav:hover {
+      background-color: #9f7e69;
+      color: #f7ffe0;
+  }
+  
+
+
+
