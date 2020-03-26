@@ -251,7 +251,12 @@ nav.stroke ul li a:hover:after{
       margin-left: 15px;
 }
 
-
+.work-in-progress {
+ display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50vw;
+}
 
   @media (max-width: 768px){
 
