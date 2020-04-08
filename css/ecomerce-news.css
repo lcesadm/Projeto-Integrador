@@ -113,7 +113,7 @@ footer p{
     margin-bottom: 10px;
 }
 
-.foot {
+.foot p{
     margin-left: 40%;
 }
 .caro{
@@ -294,8 +294,176 @@ article .right{
     margin-bottom: 10px;
     border: #DBD5B6;
 }
+.infoProduto{
+    margin-top: 60px;
+    margin-bottom: 30px;
+    background-color: #7BBBD0;
+    width: 750px;
+    height: 400px;
+    box-shadow: 7px 7px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+
+}
+
+.frete{
+    margin-top: 60px;
+    margin-bottom: 30px;
+    margin-left: 90px;
+    background-color: #7BBBD0;
+    width: 300px;
+    height: 400px;
+    box-shadow: 7px 7px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+.frete .de{
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    text-align: left;
+    text-decoration: line-through;
+    font-weight: bold;
+}
+.frete .por{
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.frete hr{
+    border: #AAAAAA solid 1px;
+    width: 245px;
+    margin-bottom: 0;
+}
+.frete .frete-prazo{
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 15px;
+}
+.frete form{
+    margin-bottom: 30px;
+}
+.frete form input{
+    background-color: #F0F0F2;
+    width: 150px;
+    height: 28px;
+    border: none;
+    border-radius: 10px;
+    margin-left: 70px;
+}
+.frete form button{
+    margin-left: 10px;
+    width: 50px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #D5E5F2;
+}
+.btn-comprar{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-left: 60px;
+    border: none;
+    background-color: #DBD5B6;
+    width: 185px;
+    height: 39px;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.btn-comprar img{
+    margin-left: 20px;
+    max-width: 30px;
+    max-height: 30px;
+}
+.btn-adicionar{
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-left: 60px;
+    border: none;
+    background-color: #DBD5B6;
+    width: 185px;
+    height: 39px;
+    text-align: left;
+    letter-spacing: 1px;
+}
+.btn-adicionar img{
+    margin-left: 20px;
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.infoProduto img{
+    margin-top: 40px;
+    margin-left: 40px;
+    max-width: 300px;
+    max-height: 323px;
+}
+.infoProduto .text{
+    margin-left: 50px;
+    margin-top: 50px;
+    width: 350px;
+    font-size: 15px;
+    
+}
+.infoProduto .text h2{
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-size: 22px;
+}
+.infoProduto .text p{
+    text-align: justify;
+}
+.infoProduto .text a{
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+}
+#infoItem{
+    background-color: rgb(123,187,208,60%);
+    border-radius: 10px;
+    box-shadow: 7px 7px 2px 1px rgba(0, 0, 0, 0.2);
+    height: 160px;
+    margin-bottom: 40px;
+}
+#infoItem h1{
+    text-align: left;
+    font-weight: bold;
+    font-size: 22px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+#infoItem p{
+    text-align: justify;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: 15px;
+}
 
 @media (max-width: 768px){
+    .infoProduto p{
+        max-width: 300px;
+    }
+    .frete{
+        margin-left: 2px;
+    }
+    #infoItem{
+        margin-top: 60px;
+        margin-left: 30px;
+        width: 300px;
+        height: 410px;
+    }
+    #infoItem h1{
+        font-size: 18px;
+    }
+    #infoItem p{
+        font-size: 15px;
+        font-weight: normal;
+    }
     #carouselExampleCaptions{
         z-index: -1;
     }
@@ -324,9 +492,21 @@ article .right{
     .btn{
         margin-left: 50px;
     }
+
+    
 }
 
 @media (max-width: 400px){
+    .infoProduto{
+        height: 700px;
+        width: 100vw;
+        box-shadow: inherit;
+    }
+    .frete{
+        margin-left: 30px;
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
     .ordenar{
         height: 100px;
         width: 100vw;
@@ -411,8 +591,9 @@ article .right{
         margin-top: auto;
         margin-bottom: 10px;
     }
-    
-    .foot {
+    .foot p{
         margin-left: 10%;
     }
+    
+    
 }
