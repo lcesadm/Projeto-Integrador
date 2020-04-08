@@ -49,6 +49,7 @@ header .nav-link{
     border-color: black;
     margin-right: 50px;
 }
+
 main p{
     letter-spacing: 1px;
     color: #050505;
@@ -74,17 +75,20 @@ main h1{
     box-shadow: 7px 7px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.login{
-    height: 400px;
-    width: 350px;
+
+.card{
     background-color:rgb(123,187,208,60%);
     border-radius: 10px;
     margin-top: 50px;
     margin-bottom: 50px;
     box-shadow: 7px 7px 2px 1px rgba(0, 0, 0, 0.2);
+    width: 100%;
 }
-
-.login h2{
+.container.login{
+    height: 400px;
+    width: 350px;
+}
+.card-body h2{
     padding-top: 27px;
     letter-spacing: 2px;
     font-size: 35px;
@@ -93,28 +97,27 @@ main h1{
     color: #050505;
 }
 
-form .label-login{
+
+form .form-group{
+
     padding-left: 29;
     margin-bottom: 20px;
     color: #050505;
     font-size: 17;
 }
 
-form button {
-    margin-left: 38px;
+a.txt{
+    margin-left: 31px;
+    color: #050505;
+}
+
+form .btn-primary {
+    color: black;
     padding-left: 39;
     width: 85px;
     height: 35px;
     background: #D5E5F2;
     border: 0.5px solid #AAAAAA;
-    border-radius: 10px;
-  }
-
-form button2 {
-    margin-left: 31px;
-    width: 120px;
-    height: 35px;
-    color: #050505;
     border-radius: 10px;
   }
 
@@ -174,13 +177,6 @@ footer p{
 @media (max-width: 400px){
     .news{
         height: 100%;
-        background-color:rgb(123,187,208,60%);
-        margin-bottom: 50px;
-    }
-
-    .login {
-        height: 400px;
-        width: 350px;
         background-color:rgb(123,187,208,60%);
         margin-bottom: 50px;
     }

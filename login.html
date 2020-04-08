@@ -40,22 +40,24 @@
           </nav>        
     </header>
     <main>
-        <div class ="container login">
-            <h2>LOGIN</h2>
-                <form>
-                <div class="label-login">
-                    <label for="usuario">Usuarío:</label>
-                    <br>
-                    <input type="email" name="usuario" id="usuario">
+        <div class="container login">
+            <div class="card" id="login">
+                <div class="card-body">
+                    <h2>LOGIN</h2>
+                    <form>
+                     <div class="form-group">
+                        <label for="exampleInputEmail1">Usuarío:</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1"  placeholder="Nome de usuarío">
+                     </div>
+                     <div class="form-group">
+                         <label for="exampleInputPassword1">Senha:</label>
+                          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Insira sua senha">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Entrar</button>
+                        <a class="txt">Esqueci a senha</a>
+                    </form>
                 </div>
-                <div class="label-login">
-                    <label for="senha">Senha:</label>
-                    <br>
-                    <input type="password" name="senha" id="senha">
-                </div>
-                <button type="submit">Entrar</button>
-                <button2 type="submit">Esqueci a senha</button2>
-            </form>
+             </div>
         </div>
     </main>
     <footer class="container-fluid">
