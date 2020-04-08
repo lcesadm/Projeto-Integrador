@@ -74,6 +74,50 @@ main h1{
     box-shadow: 7px 7px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
+.login{
+    height: 400px;
+    width: 350px;
+    background-color:rgb(123,187,208,60%);
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-shadow: 7px 7px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.login h2{
+    padding-top: 27px;
+    letter-spacing: 2px;
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+    color: #050505;
+}
+
+form .label-login{
+    padding-left: 29;
+    margin-bottom: 20px;
+    color: #050505;
+    font-size: 17;
+}
+
+form button {
+    margin-left: 38px;
+    padding-left: 39;
+    width: 85px;
+    height: 35px;
+    background: #D5E5F2;
+    border: 0.5px solid #AAAAAA;
+    border-radius: 10px;
+  }
+
+form button2 {
+    margin-left: 31px;
+    width: 120px;
+    height: 35px;
+    color: #050505;
+    border-radius: 10px;
+  }
+
 .news img{
     max-width: 224px;
     max-height: 158px;
@@ -133,6 +177,13 @@ footer p{
         background-color:rgb(123,187,208,60%);
         margin-bottom: 50px;
     }
+
+    .login {
+        height: 400px;
+        width: 350px;
+        background-color:rgb(123,187,208,60%);
+        margin-bottom: 50px;
+    }
     
     .news img{
         max-width: 224px;
@@ -169,4 +220,6 @@ footer p{
     .foot {
         margin-left: 10%;
     }
+
+
 }
