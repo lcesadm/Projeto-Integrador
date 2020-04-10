@@ -83,10 +83,11 @@ main h1{
     margin-bottom: 50px;
     box-shadow: 7px 7px 2px 1px rgba(0, 0, 0, 0.2);
     width: 100%;
+    opacity: 0.6;
 }
 
 #cadastro.card{
-    background-color:#7BBBD0;;
+    background-color:#7BBBD0;
     border-radius: 10px;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -103,10 +104,39 @@ main h1{
     padding-bottom: 100px;
 }
 
+.btn-cadastro{
+    margin-top:94px ;
+    padding: 5px 20px;
+    background-color: #DBD5B6;
+    color: black;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
 .card-body h2{
     padding-top: 27px;
     letter-spacing: 2px;
     font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+    color: #050505;
+}
+
+.card-cadastro h2{
+    padding-top: 27px;
+    letter-spacing: 2px;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    color: #050505;
+}
+
+.card-cadastro h4{
+    padding-top: 10px;
+    padding-bottom: 53px;
+    letter-spacing: 2px;
+    font-size: 17px;
     text-align: center;
     font-weight: bold;
     color: #050505;
@@ -191,6 +221,8 @@ footer p{
 }
 
 @media (max-width: 400px){
+    
+
     .news{
         height: 100%;
         background-color:rgb(123,187,208,60%);
