@@ -36,6 +36,7 @@ header .nav-link{
 
 
 .btn-nav-regis{
+    margin-left: 0;
     width: 104px;
     background-color:rgb(123,187,208,60%);
     color: black;
