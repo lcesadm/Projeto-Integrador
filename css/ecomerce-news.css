@@ -167,7 +167,7 @@ footer p{
 
 .ordenar{
     height: 50px;
-    width: 59vw;
+    width: 55vw;
     margin-left: 70px;
     background-color: #7BBBD0;
     border-radius: 10px;
@@ -175,7 +175,7 @@ footer p{
 .ordernar-seletor{
     margin-left: 40px;
     margin-top: 13px;
-    margin-right: 360px;
+    margin-right: 300px;
 }
 .ordenar .dropdown{
     margin-top: 7px;
@@ -185,7 +185,7 @@ footer p{
     color: black;
 }
 .produtos-pai{
-    width: 59vw;
+    width: 55vw;
     margin-top: 40px;
     margin-bottom: 50px;
     max-height:1000px;
@@ -211,8 +211,8 @@ footer p{
 
 .produtos{
     background-color: #5D8E9E;
-    margin-left: 30px;
-    margin-right: 50px;
+    margin-left: 10px;
+    margin-right: 30px;
     width: 225px;
     height: 332px;
     border-radius: 10px;
@@ -263,8 +263,8 @@ article .right{
 }
 .produtos1{
     background-color: #7BBCD1;
-    margin-left: 30px;
-    margin-right: 50px;
+    margin-left: 10px;
+    margin-right: 30px;
     width: 225px;
     height: 332px;
     border-radius: 10px;
