@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+    font-family: 'Roboto',Arial,sans-serif;
+}
+a{
+    color: #050505;
+}
+
+
+header{
+    background-color:#FDFDFC;
+    height: 80px;
+}
+header .btn:hover{
+    background-color: #EEEEEE;
+    color: black;
+
+}
+
+header img{
+    max-width: 150px;
+    max-height: 67px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+header .nav-link{
+    margin-top: 25px;
+    letter-spacing: 2px;
+    margin-left: 20px;
+}
+
+
+
+.btn-nav-regis{
+    margin-left: 0;
+    width: 104px;
+    background-color:rgb(123,187,208,60%);
+    color: black;
+    border-color: black;
+    margin-right: 10px;
+}
+.btn-nav-login{
+    width: 82px;
+    background-color:rgb(123,187,208,60%);
+    color: black;
+    border-color: black;
+    margin-right: 50px;
+}
+footer{
+    background-color: #2F2E2E;
+}
+footer img{
+    max-width: 150px;
+    max-height: 74px;
+    margin-bottom: 1px;
+}
+
+footer p{
+    text-align: center;
+    color: #F6FAFC;
+    font-size: 17px;
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
+.foot p{
+    margin-left: 40%;
+}
+.pag{
+    width: 553px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 7px 7px 2px 1px rgba(0, 0, 0, 0.2);
+    background-color: #7BBBD0;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.pag h1{
+    font-size: 20px;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+.pag .din{
+    max-width: 80px;
+    max-height: 86px;
+    border-radius: 24px;
+    margin-left: 60px;
+    margin-top: 13px;
+}
+.pag img{
+    max-width: 148px;
+    max-height: 120px;
+    border-radius: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.pag button{
+    margin-top: 30px;
+    background-color: #DBD5B6;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    width: 125px;
+    height: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.finalizar{
+    background-color: #7BBBD0;
+    border-radius: 80px;
+    width: 300px;
+    height: 380px;
+    padding: 20px;
+    box-shadow: 7px 7px 2px 1px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 100px;
+}
+.finalizar h2{
+    font-size: 20px;
+    margin-top: 100px;
+    margin-left: 20px;
+}
+.finalizar mark{
+    background-color: #DBD5B6;
+    border-radius: 10px;
+    margin-left: 30px;
+}
+.finalizar button{
+    margin-top: 80px;
+    background-color: #DBD5B6;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    width: 185px;
+    height: 30px;
+    margin-left: 35px;
+    margin-right: 40px;
+}
+.regras{
+    box-shadow: 7px 7px 2px 1px rgba(0, 0, 0, 0.2);
+    background-color: rgb(123,187,208,60%);
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 20px 20px;
+    letter-spacing: 1px;
+    margin-bottom: 50px;
+}
+.modal-content h2{
+    font-size: 18px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.cartao input{
+    margin-left: 50px;
+}
+.modal-content p{
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.modal-content hr{
+    margin-left: 50px;
+    border: #DBD5B6 solid 1px;
+}
+.parcelamento{
+    margin-left: 30px;
+}
+.parcelamento ul li{
+    list-style: none;
+    margin-bottom: 10px;
+}
+.parcelamento ul li strong{
+    margin-left: 20px;
+}
+.parcelamento ul li input{
+    
+    margin-right: 10px;
+}
