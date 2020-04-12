@@ -445,6 +445,21 @@ article .right{
     font-weight: bold;
     font-size: 15px;
 }
+@media (max-width: 1100px){
+    .ordenar{
+        height: 50px;
+        width: 65vw;
+        margin-left: 70px;
+        background-color: #7BBBD0;
+        border-radius: 10px;
+    }
+    .ordernar-seletor{
+        margin-left: 40px;
+        margin-top: 13px;
+        margin-right: 100px;
+    }
+
+}
 
 @media (max-width: 768px){
     .infoProduto p{
@@ -490,13 +505,89 @@ article .right{
         font-size: 15px;
         
     }
+    .pagination{
+        margin-top: 30px;
+    }
 
     .btn{
         margin-left: 50px;
     }
+    
 
     
 }
+@media (max-width: 415px){
+    .news{
+        height: 360px;
+    }
+    footer img{
+        max-width: 130px;
+        max-height: 74px;
+    }
+    
+    footer p{
+        text-align: center;
+        color: #F6FAFC;
+        font-size: 17px;
+        margin-top: auto;
+        margin-bottom: 10px;
+    }
+    .foot p{
+        margin-left: 5%;
+    }
+    .filter{
+        width: 100%;
+        text-align: justify;  
+    }
+    .filter ul li{
+        padding-left: 5px;
+        display: inline;
+        padding-right: 5px;
+        border-right: black solid 1px;
+        padding-right: 10px;
+    }
+    .ordenar{
+        height: 100px;
+        width: 100vw;
+        margin-left: 0px;
+        
+    }
+    .ordernar-seletor{
+        margin-left: 13px;
+        margin-top: 13px;
+        width: 350px;
+        margin-right: 0;
+        font-size: 15px;
+      
+    }
+    .ordenar .dropdown{
+        margin-top: 0px;
+        margin-left: 40px;
+    }
+    .produtos-pai{
+        width: 100vw;
+        overflow-y: inherit;
+        overflow-x: inherit;
+    }
+    .produtos{
+        width: 100vw;        
+    }
+    .produtos1{
+        width: 100vw;        
+    }
+    .absolut{
+        position: absolute;
+        top: 630vh;
+
+    }
+    .infoProduto{
+        height: 750px;
+    }
+    .frete{
+        margin-left: 50px;
+    }
+}
+
 
 @media (max-width: 400px){
     .infoProduto{
@@ -537,7 +628,7 @@ article .right{
     }
     .absolut{
         position: absolute;
-        top: 570vh;
+        top: 700vh;
 
     }
     .produtos-pai{

@@ -303,3 +303,42 @@ h5{
     width: 200px;
     height: 30px;
 }
+@media (max-width: 768px){
+    .din{
+        display: none;
+    }
+    .pag{
+        max-width: 400px;
+        margin-right: 0;
+    }
+    .finalizar{
+        margin-left: 10px;
+        
+    }
+    .navbar-collapse{
+        z-index: 2;
+        background-color: #2F2E2E;
+    }
+    .navbar-collapse a{
+        color: #F6FAFC;
+    }
+}
+@media (max-width: 415px){
+    .regras{
+        box-shadow: none;
+        width: 100%;
+    }
+    .pag{
+        box-shadow: none;
+        width: 100%;
+    }
+    .pag img{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .pag button{
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+}

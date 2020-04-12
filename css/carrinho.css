@@ -264,91 +264,22 @@ footer p{
     .btn{
         margin-left: 50px;
     }
+    .carrinho img{
+        margin-left: 200px;
+    }
+    .valores{
+        margin-left: 200px;
+    }
 
     
 }
 
-@media (max-width: 400px){
-    .infoProduto{
-        height: 700px;
-        width: 100vw;
-        box-shadow: inherit;
+@media (max-width: 415px){
+    .carrinho img{
+        margin-left: 80px;
     }
-    .frete{
-        margin-left: 30px;
-        margin-top: 20px;
-        margin-bottom: 0;
-    }
-    .ordenar{
-        height: 100px;
-        width: 100vw;
-        margin-left: 0px;
-        
-    }
-    .ordernar-seletor{
-        margin-left: 13px;
-        margin-top: 13px;
-        width: 350px;
-        margin-right: 0;
-        font-size: 15px;
-      
-    }
-    .ordenar .dropdown{
-        margin-top: 0px;
-        margin-left: 40px;
-    }
-    .pagination{
-        margin-top: 40px;
-    }
-    .news{
-        height: 100%;
-        background-color:rgb(123,187,208,60%);
-        margin-bottom: 50px;
-    }
-    .absolut{
-        position: absolute;
-        top: 570vh;
-
-    }
-    .produtos-pai{
-        width: 100vw;
-        overflow-y: inherit;
-        overflow-x: inherit;
-    }
-    .produtos{
-        width: 100vw;        
-    }
-    .produtos1{
-        width: 100vw;        
-    }
-    .filter{
-        width: 370px;
-        text-align: justify;  
-    }
-    .filter ul li{
-        padding-left: 5px;
-        display: inline;
-        padding-right: 5px;
-        border-right: black solid 1px;
-    }
-    
-    .news img{
-        max-width: 224px;
-        max-height: 158px;
-        margin-left: 100px;
-        margin-top: 30px;
-    }
-
-    .news h2{
-        margin-left: 20px;
-        text-align: justify;
-        font-size: 18px;
-        width: 340px;
-    }
-    .news h4{
-        margin-left: 20px;
-        font-size: 14px;
-        width: 340px;
+    .valores{
+        margin-left: 10px;
     }
     footer img{
         max-width: 130px;

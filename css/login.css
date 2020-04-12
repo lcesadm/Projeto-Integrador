@@ -269,3 +269,13 @@ footer p{
 
 
 }
+@media (max-width: 768px){
+
+    .navbar-collapse{
+        z-index: 2;
+        background-color: #2F2E2E;
+    }
+    .navbar-collapse a{
+        color: #F6FAFC;
+    }
+}

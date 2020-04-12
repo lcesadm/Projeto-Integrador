@@ -190,7 +190,6 @@ form .btn-primary {
 
 footer{
     background-color: #2F2E2E;
-    bottom:0;
     left:0;
 }
 footer img{
@@ -218,6 +217,7 @@ footer p{
     .navbar-collapse a{
         color: #F6FAFC;
     }
+    
 }
 
 @media (max-width: 400px){
@@ -267,6 +267,26 @@ footer p{
     .foot {
         margin-left: 10%;
     }
+    
 
 
+}
+@media (max-width: 768px){
+    .navbar-collapse{
+        z-index: 2;
+        background-color: #2F2E2E;
+    }
+    .navbar-collapse a{
+        color: #F6FAFC;
+    }
+    footer{
+        position: absolute;
+        top: 100vh;
+    }
+}
+@media (max-width: 415px){
+    footer{
+        position: absolute;
+        top: 220vh;
+    }
 }
