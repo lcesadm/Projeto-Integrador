@@ -215,3 +215,31 @@ footer p{
         color: #F6FAFC;
     }
 }
+
+@media (max-width: 375px){
+    .esq img{
+    max-width: 133px;
+    max-height: 300px;
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+
+    }
+    .esq p{
+        font-size: 13px;
+        max-width: 300px;
+        color: #F6FAFC;
+        letter-spacing: 1px;
+        text-align: justify;
+        margin-left: -37px;
+        word-wrap: break-word;
+    }
+   .left-container div{
+       margin-left: 20px;
+
+   }
+    div .row{
+       margin-left: 7px;
+   }
+    
+}
