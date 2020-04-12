@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico">
+
 
 </head>
 <body>
@@ -40,24 +42,18 @@
           </nav>        
     </header>
     <main>
-        <div class="container login">
-            <div class="card" id="login">
-                <div class="card-body">
-                    <h2>LOGIN</h2>
-                    <form>
-                     <div class="form-group">
-                        <label for="exampleInputEmail1">Usuarío:</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1"  placeholder="Nome de usuarío">
-                     </div>
-                     <div class="form-group">
-                         <label for="exampleInputPassword1">Senha:</label>
-                          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Insira sua senha">
-                        </div>
-                        <a href="cliente.html>"><button type="submit" class="btn btn-primary">Entrar</button></a>
-                        <a class="txt">Esqueci a senha</a>
-                    </form>
-                </div>
-             </div>
+        <div class="container">
+               <div class="login">
+                <h2>Login</h2>
+                <form action="login">
+                  <label for="login">Login:</label>
+                    <input class="form-control" type="text" placeholder="Nome do usuario" name="login">
+                    <label for="senha">Senha:</label>
+                    <input class="form-control" type="text" placeholder="Digite a senha" name="senha">
+                    <a href="cliente.html"><button class="btn btn-primary" type="submit">Entrar</button></a>
+                    <a href="#" class="txt">Esqueci a senha</a>
+                </form>
+               </div>
         </div>
     </main>
     <footer class="container-fluid">

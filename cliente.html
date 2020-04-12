@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finzalizar pedido</title>
+    <title>Minha pagina</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/finalizar.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico">
+
 
 </head>
 <body>
@@ -63,22 +65,22 @@
         <h2>Endereço</h2>
         <form>
             <div class="row">
-                <div class="form-group">
+              <div class="col-5">
                 <label for="Rua">Digite o nome da sua rua:</label>
                 <input type="text" class="form-control rua" id="formGroupExampleInput" placeholder="Digite o nome da sua rua com o numero" name="Rua">
-                </div>
+              </div>
             
-                <div class="form-group">
+                <div class="col-5">
                 <label for="Complemento">Complemento:</label>
                 <input type="text" class="form-control Complemento" id="formGroupExampleInput" placeholder="Complemento" name="Complemento">
                 </div>
 
-                <div class="form-group">
+                <div class="col-5">
                     <label for="cep">Cep:</label>
                     <input type="text" class="form-control cep" id="formGroupExampleInput" name="cep" maxlength="8" OnKeyPress="formatar('#####-###', this)" placeholder="_ _ _ _ _ - _ _ _">
                 </div>
 
-                <div class="form-group estado">
+                <div class="col-5 estado">
                     <label for="estado">Estado</label>
                     <select class="form-control" id="exampleInputCountry" name="estado">
                       <option value="" selected="selected">Selecione um estado</option>
@@ -112,7 +114,7 @@
                     </select>
                 </div>
 
-                <div class="form-group">
+                <div class="col-5">
                     <label for="cidade">Cidade:</label>
                     <input type="text" class="form-control cidade" id="formGroupExampleInput" placeholder="Digite o nome da sua cidade" name="cidade">
                 </div>
@@ -126,22 +128,22 @@
             <h2>Cartões</h2>
             <form>
                 <div class="row">
-                    <div class="form-group">
+                    <div class="col-5">
                     <label for="numero-cartao">Digite o nome do seu cartão:</label>
                     <input type="text" class="form-control cartao-number" id="formGroupExampleInput" name="numero-cartao" OnKeyPress="formatar('####-####-####-####', this)" placeholder="Digite o numero do seu cartão" maxlength="16">
                     </div>
                 
-                    <div class="form-group">
+                    <div class="col-5">
                     <label for="nome-titular">Nome do titular:</label>
                     <input type="text" class="form-control nome-titular" id="formGroupExampleInput" placeholder="Digite o nome impresso no cartão" name="nome-titular">
                     </div>
     
-                    <div class="form-group">
+                    <div class="col-5">
                         <label for="validade">Validade:</label>
                         <input type="text" class="form-control cep" id="formGroupExampleInput" name="validae" maxlength="4"  placeholder="_ _ / _ _">
                     </div>
 
-                    <div class="form-group validade">
+                    <div class="col-5 validade">
                         <label for="validade">CVV:</label>
                         <input type="text" class="form-control cep" id="formGroupExampleInput" name="validae" maxlength="3"  placeholder="Digite o codigo">
                     </div>
@@ -154,36 +156,28 @@
             <h2>meu cadastro</h2>
             <form>
             <div class="form-row">
-                <div class="form-group"></div>
-                  <div class="form-group">
+                  <div class="col-5">
                     <label for="inputEmail4">Email:</label>
                     <input type="email" class="form-control email" id="inputEmail4" placeholder="Email">
                   </div>
-                  <div class="form-group col-md-2"></div>
-                  <div class="form-group col-md-4">
+                  <div class="col-5">
                     <label for="inputPassword4">Senha:</label>
                     <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
                   </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group"></div>
-                      <div class="form-group">
+                      <div class="col-5">
                         <label for="inputEmail4">CPF:</label>
                         <input type="text" class="form-control CPF" id="inputEmail4" placeholder="CPF">
                       </div>
-                      <div class="form-group col-md-2"></div>
-                      <div class="form-group col-md-4">
+                      <div class="col-5">
                         <label for="inputPassword4">Nome completo:</label>
                         <input type="text" class="form-control" id="inputPassword4" placeholder="Nome completo">
                       </div>
-                  </div>
-                  <div class="form-row">
-                      <div class="form-group col-md-4 nasc">
+                      <div class="col-5 nasc">
                         <label for="inputPassword4">Data de nascimento:</label>
                         <input type="date" class="form-control" id="inputPassword4" placeholder="DD/MM/AAAA">
                       </div>
                       <div class="sexo">
-                          <div class="form-group">
+                          <div class="col">
                               <label for="sexo">Qual seu sexo:</label>
                               <br>
                               <input type="checkbox" name="sexo" value="masculino" class="form-check-input"><label class="form-check-label">Masculino</label>
@@ -191,13 +185,14 @@
                               <input type="checkbox" name="sexo" value="masculino" class="form-check-input"><label class="form-check-label">Feminino</label>  
                           </div>
                       </div>
-                      <div class="form-group form-check">
+                      <div class="col sexo">
                           <h5>Gostaria de assinar nosso newlestter?</h5>
                         <input type="checkbox" class="form-check-input" id="newlester">
                         <label class="form-check-label" for="newlester">Sim</label>
                       </div>
                 </div>
-                <div class="form-group form-check">
+                
+                <div class="col sexo">
                   <label class="form-check-label" for="newlester">Se for comerciante ou professor e queira utilizar nossa plataforma do e-commerce diga sim, e iremos enviar um email  solicitando suas comprovações que irão para analise:</label>
                   <br>
                   <input type="checkbox" class="form-check-input" id="newlester">
