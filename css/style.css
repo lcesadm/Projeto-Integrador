@@ -1211,7 +1211,50 @@ h5{
 }
 @media (max-width: 768px){
             /* loja virtual */
-
+    .absolut{
+        display: none;
+    }
+    .filter{
+        width: 100%;
+        text-align: justify;  
+    }
+    .filter ul li{
+        padding-left: 5px;
+        display: inline;
+        padding-right: 5px;
+        border-right: black solid 1px;
+        padding-right: 10px;
+    }
+    .ordenar{
+        height: 100px;
+        width: 100vw;
+        margin-left: 0px;
+        
+    }
+    .ordernar-seletor{
+        margin-left: 13px;
+        margin-top: 13px;
+        width: 350px;
+        margin-right: 0;
+        font-size: 15px;
+    
+    }
+    .ordenar .dropdown{
+        margin-top: 0px;
+        margin-left: 40px;
+    }
+    .produtos-pai{
+        width: 100%;
+        overflow-y: inherit !important;
+        overflow-x: inherit !important;
+    }
+    .produtos{
+        width: 100vw !important;        
+    }
+    .produtos1{
+        width: 100vw;   
+            
+    }
     .ordenar{
         height: 70px;
     }
@@ -1342,6 +1385,33 @@ h5{
     }
 
     /* cadastro */
+    .ordenar{
+        width: 60vw;
+        margin-left: 15px;
+    }
+    .ordernar-seletor{
+        margin-right: 10px;
+    }
+
+    .produtos-pai{
+        width: 60vw;
+        margin-top: 40px;
+        margin-bottom: 50px;
+        max-height:1000px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        
+    }
+    .produtos{
+        background-color: #5D8E9E;
+        margin-left: 20px;
+        margin-right: 20px;
+        width: 225px;
+        height: 332px;
+        border-radius: 10px;
+        margin-bottom: 50px;
+        box-shadow: 7px 7px 2px 1px rgba(0, 0, 0, 0.2);
+    }
 }
 @media (max-width:500px){
     .news{
