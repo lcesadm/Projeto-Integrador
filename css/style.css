@@ -1104,6 +1104,93 @@ h5{
 
 
 /* pag home */
+
+/* pagina mapa */
+.mapa{
+    background-color:rgb(123,187,208,60%);
+    width: 100%;
+    border-radius: 40px;
+    box-shadow: 7px 7px 2px 1px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #F6FAFC;
+}
+.mapa h1{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.mapa .fil-map{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 30px;
+}
+.mapa .fil-map h3{
+    text-align: left;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+.mapa .fil-map p{
+    font-size: 18px;
+}
+.mapa .fil-map select{
+    margin-bottom: 20px;
+}
+.mapa .fil-map .form-check{
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.fil-left{
+    padding-right: 40px;
+}
+.map-rigth{
+    padding-left: 100px;
+}
+.mapa iframe{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.mapa .locais{
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: solid 1px rgb(5,5,5,20%);
+}
+
+.mapa .locais p{
+    font-weight: normal;
+    font-size: 17px;
+    margin-left: 25px;
+}
+#map-locais-left{
+    text-align: left;
+    margin-left: 0;
+    padding-left: 0;
+}
+.mapa .locais h1{
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+.mapa .locais button{
+    width: 169px;
+    height: 34px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+    border-radius: 10px;
+    margin: 0 0 0 30px;
+    border: none;
+    background-color: #DBD5B6;
+}
+
+/* pagina mapa */
+
 @media (max-width: 1100px){
     /* loja virtual */
     .ordenar{
@@ -1342,6 +1429,13 @@ h5{
                 margin-top: 0;
             }
 
+}
+@media (max-width: 600px){
+    .fil-left{
+        padding-right: 20px;
+    }
+    .map-rigth{
+        padding-left: 20px;
 }
 
 @media (max-width: 400px){
