@@ -1422,8 +1422,8 @@ h5{
         height: 60vh;
     }
     .news img{
-        max-width: 300px;
-        max-height: 300px;
+        max-width: 70vw;
+        max-height: 70vh;
         margin-left: 40px;
     }
     .news .row{
