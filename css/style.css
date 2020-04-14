@@ -1282,6 +1282,9 @@ h5{
 }
 
 @media (max-width:900px){
+    .news{
+        height: 30vh;
+    }
     /* header */
     .navbar-collapse{
         z-index: 2;
@@ -1415,10 +1418,28 @@ h5{
 }
 @media (max-width:500px){
     .news{
-        height: 300px;
+        
+        height: 60vh;
+    }
+    .news img{
+        max-width: 300px;
+        max-height: 300px;
+        margin-left: 40px;
+    }
+    .news .row{
+    
+        display: block;
     }
     .news h2{
+        text-align: justify;
+        width: 90%;
+        margin-left: 30px;
         font-size: 20px;
+        margin-left: 30px;
+    }
+    .news h4{
+        width: 100%;
+        margin-left: 30px;
     }
     .carrinho{
         width: 100vw;
@@ -1550,4 +1571,5 @@ h5{
 
                 /* loja virtual */
 
+    }
 }
