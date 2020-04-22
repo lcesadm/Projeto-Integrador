@@ -40,23 +40,55 @@
           </nav>        
     </header>
     <div class="container news items">
-        <div class="items-container">
-            <h1>Produtos Vendidos</h1>
-            <div class="qtd">
-                <p class="qtd-vendida">QTD:O</p>
-            </div>
-        </div>
-        <div class="container news form-add ">
-            <h1>Adicionar Produto</h1>
-            <form class="adding-product">
-                <label for="inputNameProduto" >Nome do Produto</label>
-                <input class="form-control" id="NomeProduto" placeholder="Nome do Produto"/>
-                <label for="inputDescProduto" >Descrição  Produto</label>
-                <input class="form-control" id="DescProduto" placeholder="Descrição  Produto"/>
-                <label for="inputValorProduto" >Valor do Produto</label>
-                <input class="form-control" id="ValorProduto" placeholder="Valor do Produto"/>
-                <button class="btn-add">Adicionar Produto</button>
+        <div class="add-item">
+            <h2>Adicionar produto</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="nome">
+                        Nome do produto:
+                    </label>
+                    <input type="text" name="nome" placeholder="Nome do produto">
+                </div>
+               
+                <div class="form-group">
+                    <label for="valor">
+                        Valor do produto
+                    </label>
+                    <input type="text" name="valor" placeholder="Valor">
+                </div>
+                <div class="form-group">
+                    <label for="descri">
+                        Descrição do produto:
+                    </label>
+                    <textarea name="descri" placeholder="Breve descrição"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">Example file input</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                </div>
+                <button type="submit">Enviar</button>
             </form>
+        </div>
+
+
+
+
+        <div class="vendidos">
+            <h2>Itens vendidos</h2>
+            <ul>
+                <li>
+                    <div>
+                        Nome do produto: <strong>Curso de matematica</strong> | Codígo do produto: <strong>#098867</strong>| Quantidade vendida: <strong>5</strong> | Total a receber: <strong>R$ 120,00</strong>
+                    </div>
+                    <hr>
+                </li>
+                <li>
+                    <div>
+                        Nome do produto: <strong>Curso de matematica</strong> | Codígo do produto: <strong>#098867</strong>| Quantidade vendida: <strong>5</strong> | Total a receber: <strong>R$ 120,00</strong>
+                    </div>
+                    <hr>
+                </li>
+            </ul>
         </div>
     </div>
 <footer class="container-fluid">
