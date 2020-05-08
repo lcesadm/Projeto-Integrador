@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg ">
+        <nav class="navbar fixed-top navbar-expand-lg ">
             <a href="index.html"><img src="img/Learning map-logo - black.png" alt="Logo"></a>
             
             <button class="navbar-toggler navbar-dark bg-dark" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,6 +34,9 @@
                     <a class="nav-link" href="mapa.html">Mapa</a>
                 </li>
               </ul>
+              <div class="contador">
+                <a href="carrinho.html"><img src="img/ecomerce/carrinho.png"></a><strong>2</strong>
+              </div>
               <form class="form-inline my-2 my-lg-0 btn-pai">
                 <a href="cadastro.html"><button class="btn btn-outline-success my-2 my-sm-0 btn-nav-regis" type="button">Registar</button></a>
                 <a href="login.html"><button class="btn btn-outline-success my-2 my-sm-0 btn-nav-login" type="button">Login</button></a>
@@ -214,34 +217,31 @@
                         </a>
                       </li>
                     </ul>
-                    <div class="contador">
-                      <img src="img/ecomerce/carrinho.png"> <strong>2</strong>
-                    </div>
                   </div>
                   </nav>
                   <div class="produtos-pai">
                     <div class="row">
 
                     <div class="produtos">
-                      <a href="infoProdutos.html">
+                      <a id="link-produto" href="infoProdutos.html">
                         <img src="img/ecomerce/item1.jpg" alt="Produto">                        
-                        <article>
+                        <article class="description" >
                             <p class="titulo">Livro - Do mil ao milhão</p>
                             <div class="row">
                             <p class="left">De <em>R$ 34,90</em></p>
                             <P class="right">Por R$ 25,90</P>
                             </div>
                         </article>
-                      </a>
+                      </a> 
                         <a href="carrinho.html"><button class="btn btn-primary" type="submit">Adicionar ao carrinho 
                         </button></a>
                     </div>
                   
                 
                     <div class="produtos1">
-                      <a href="#">
+                      <a id="link-produto"href="#">
                         <img src="img/ecomerce/item2.jpg" alt="Produto">                        
-                        <article>
+                        <article class="description">
                             <p class="titulo">Livro - A surtil arte de ligar o foda-se</p>
                             <div class="row">
                             <p class="left">De <em>R$ 34,90</em></p>
@@ -254,9 +254,9 @@
                     </div>
 
                     <div class="produtos">
-                      <a href="#">
+                      <a id="link-produto"href="#">
                       <img src="img/ecomerce/item1.jpg" alt="Produto">                        
-                      <article>
+                      <article class="description">
                           <p class="titulo">Livro - Do mil ao milhão</p>
                           <div class="row">
                           <p class="left">De <em>R$ 34,90</em></p>
@@ -270,9 +270,9 @@
                 
               
                   <div class="produtos1">
-                    <a href="#">
+                    <a id="link-produto"href="#">
                       <img src="img/ecomerce/item2.jpg" alt="Produto">                        
-                      <article>
+                      <article class="description">
                           <p class="titulo">Livro - A surtil arte de ligar o foda-se</p>
                           <div class="row">
                           <p class="left">De <em>R$ 34,90</em></p>
@@ -285,9 +285,9 @@
                   </div>
 
                   <div class="produtos">
-                    <a href="#">
+                    <a id="link-produto"href="#">
                     <img src="img/ecomerce/item1.jpg" alt="Produto">                        
-                    <article>
+                    <article class="description">
                         <p class="titulo">Livro - Do mil ao milhão</p>
                         <div class="row">
                         <p class="left">De <em>R$ 34,90</em></p>
@@ -301,9 +301,9 @@
               
             
                 <div class="produtos1">
-                  <a href="#">
+                  <a id="link-produto"href="#">
                     <img src="img/ecomerce/item2.jpg" alt="Produto">                        
-                    <article>
+                    <article class="description">
                         <p class="titulo">Livro - A surtil arte de ligar o foda-se</p>
                         <div class="row">
                         <p class="left">De <em>R$ 34,90</em></p>
@@ -316,9 +316,9 @@
                 </div>
 
                 <div class="produtos">
-                  <a href="#">
+                  <a id="link-produto" href="#">
                   <img src="img/ecomerce/item1.jpg" alt="Produto">                        
-                  <article>
+                  <article class="description">
                       <p class="titulo">Livro - Do mil ao milhão</p>
                       <div class="row">
                       <p class="left">De <em>R$ 34,90</em></p>
@@ -332,9 +332,9 @@
             
           
               <div class="produtos1">
-                <a href="#">
+                <a id="link-produto" href="#">
                   <img src="img/ecomerce/item2.jpg" alt="Produto">                        
-                  <article>
+                  <article class="description">
                       <p class="titulo">Livro - A surtil arte de ligar o foda-se</p>
                       <div class="row">
                       <p class="left">De <em>R$ 34,90</em></p>
@@ -347,9 +347,9 @@
               </div>
 
               <div class="produtos">
-                <a href="#">
+                <a id="link-produto" href="#">
                 <img src="img/ecomerce/item1.jpg" alt="Produto">                        
-                <article>
+                <article class="description">
                     <p class="titulo">Livro - Do mil ao milhão</p>
                     <div class="row">
                     <p class="left">De <em>R$ 34,90</em></p>

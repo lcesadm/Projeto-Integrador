@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg ">
+        <nav class="navbar fixed-top navbar-expand-lg ">
             <a href="index.html"><img src="img/Learning map-logo - black.png" alt="Logo"></a>
             
             <button class="navbar-toggler navbar-dark bg-dark" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,44 +58,42 @@
                         <option value="Centro-cultural">Centro Culturais</option>
                         <option value="Sesc">Sesc</option>
                     </select>
-                    <label for="locais-proximos">Gostaria de verificar os pontos mais proximos pelo seu endereço cadastrado ?</label>
+    
                     <div class="form-check form-check-inline">
+                        <label for="locais-proximos">Verificar  pontos mais proximos.</label>
                         <input class="form-check-input" type="checkbox" name="local-proximo-sim" id="local-proximo-sim" value="local-proximo-sim" checked>
-                        <label class="form-check-label" for="local-proximo-sim">Sim</label>
+                       
                     </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="local-proximo-nao" id="local-proximo-nao" value="local-proximo-nao">
-                        <label class="form-check-label" for="local-proximo-nao">Não</label>
-                    </div>                                     
+                                                       
                 </div>
                 <div class="col-6 map-rigth">
                     <p>Precisa de algum dos itens abaixo?</p>
                     <div class="row">
                         <div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="wifi" id="wifi" value="wifi">
+                                <input class="form-check-input" type="checkbox" name="wifi" id="wifi" value="wifi">
                                 <label class="form-check-label" for="wifi">Wi-fi</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="livros" id="livros" value="livros">
+                                <input class="form-check-input" type="checkbox" name="livros" id="livros" value="livros">
                                 <label class="form-check-label" for="livros">Livros</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="cafeteria" id="cafeteria" value="cafeteria">
+                                <input class="form-check-input" type="checkbox" name="cafeteria" id="cafeteria" value="cafeteria">
                                 <label class="form-check-label" for="cafeteria">cafeteria</label>
                             </div>
                         </div>
                         <div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="mesas" id="mesas" value="mesas">
+                                <input class="form-check-input" type="checkbox" name="mesas" id="mesas" value="mesas">
                                 <label class="form-check-label" for="mesas">Mesas</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="computadores" id="computadores" value="computadores">
+                                <input class="form-check-input" type="checkbox" name="computadores" id="computadores" value="computadores">
                                 <label class="form-check-label" for="computadores">Computadores</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="Tomadas" id="Tomadas" value="Tomadas">
+                                <input class="form-check-input" type="checkbox" name="Tomadas" id="Tomadas" value="Tomadas">
                                 <label class="form-check-label" for="Tomadas">Tomadas</label>
                             </div>
                         </div>

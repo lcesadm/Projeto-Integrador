@@ -99,7 +99,7 @@
         <div class="row">
             <form action="cep" method="post">
                 <label for="cel">Digite seu CEP:</label>
-                <input type="text" name="cep" maxlength="8" OnKeyPress="formatar('#####-###', this)" placeholder="Digite seu cep">
+                <input class="cep" type="text" name="cep" maxlength="8" OnKeyPress="formatar('#####-###', this)" placeholder="Digite seu cep">
                 <button type="submit">Calcular</button>
             </form>
             <div class="p">
@@ -111,7 +111,7 @@
         
             <form action="cupom" method="post">
                 <label for="cupom">Digite seu codigo do cupom:</label>
-                <input type="text" name="cupom" maxlength="8" OnKeyPress="formatar('#####-###', this)" placeholder="Digite seu cupom">
+                <input class="cupom" type="text" name="cupom" maxlength="8" OnKeyPress="formatar('#####-###', this)" placeholder="Digite seu cupom">
                 <button type="submit">Aplicar</button>
             </form>
             <a href="finalizar.html"><button type="submit" class="btn-carrinho">Finalizar pedido </button></a>
