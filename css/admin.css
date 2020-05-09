@@ -2,8 +2,19 @@ div.items{
     position: relative;
     margin-top: 50px;
     height: 601px;
-    border-radius: 25px;
+    border-radius: 5px;
 }
+.items input{
+    padding: 10px;
+    border-radius: 5px;
+}
+.form-group textarea{
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    top: 30px;
+}
+
 
 div.qtd{
 position: absolute;
@@ -11,7 +22,7 @@ width: 469px;
 height: 228px;
 
 background: #C4C4C4;
-border-radius: 94px;
+border-radius: 5px;
 }
 
 p.qtd-vendida{
@@ -40,7 +51,7 @@ button.btn-add{
     height: 490px;
     
     background: #C4C4C4;
-    border-radius: 107px;
+    border-radius: 5px;
 }
 
 
