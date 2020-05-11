@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/admin.css">
+    <title>Admin</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg ">
+            <a href="index"><img src="img/Learning map-logo - black.png" alt="Logo"></a>
+            
+            <button class="navbar-toggler navbar-dark bg-dark" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                  <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="noticia">Notícias</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ecomerce">Loja Virtual</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mapa">Mapa</a>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0 btn-pai">
+                <% if(typeof usuario === 'undefined') {%>
+                    <a href="registro"><button class="btn btn-outline-success my-2 my-sm-0 btn-nav-regis" type="button">Registar</button></a>
+                    <a href="login"><button class="btn btn-outline-success my-2 my-sm-0 btn-nav-login" type="button">Login</button></a>
+                  <% }else { %>
+                    <p><%= usuario.nome %></p>
+                  <% } %>
+                
+                
+              </form>
+            </div>
+          </nav>        
+    </header>
+    <div class="container news items">
+        <div class="add-item">
+            
+            <form action="/paginaAdmin" method="post" enctype="multipart/form-data">
+                <h2>Adicionar produto</h2>
+                <div class="form-group">
+                    <label for="nome_produto">
+                        Nome do produto:
+                    </label>
+                    <input type="text" name="nome_produto" placeholder="Nome do produto">
+                </div>
+               
+                <div class="form-group">
+                    <label for="valor">
+                        Valor do produto
+                    </label>
+                    <input type="text" name="valor">
+                </div>
+                <div class="form-group">
+                    <label for="descricao">
+                        Descrição do produto:
+                    </label>
+                    <textarea name="descricao" placeholder="Breve descrição"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="foto">Example file input</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="foto">
+                </div>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+
+
+
+
+        <div class="vendidos">
+            <h2>Itens vendidos</h2>
+            <ul>
+                <% produtos.forEach(element => {%> 
+                    <li>
+                        <div>
+                            Nome do produto: <strong><%= element.nome_produto %></strong> | Codígo do produto: <strong><%= element.id_produto %></strong>| Quantidade vendida: <strong>5</strong> | Total a receber: <strong>R$ 120,00</strong>
+                        </div>
+                        <hr>
+                    </li>
+                <% }); %>
+                
+            </ul>
+        </div>
+    </div>
+    <%- include('./partials/footer') %>
