@@ -4,8 +4,17 @@ const bcrypt = require("bcrypt");
 
 
 const bodyController = {
-    home: (req, res) => {
-        return res.render("index", {usuario: req.session.usuario});
+    home: async(req, res) => {
+      const con = new Sequelize(config);
+
+        
+
+        const produtos = await con.query("select * from produtos",
+          {
+            type: Sequelize.QueryTypes.SELECT,
+          }
+        );
+        return res.render("index", {usuario: req.session.usuario, produtos: produtos});
     },
     noticia: (req, res) => {
         return res.render("noticia", {usuario: req.session.usuario});

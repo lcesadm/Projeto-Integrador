@@ -37,7 +37,25 @@ header{
 header nav{
     background-color:#FDFDFC;
     height: 80px;
+}
+header nav form{
+    width: auto;
+}
+header nav form img{
+    width: 35px;
     
+}
+header nav form p{
+    max-width: 35px;
+    margin-right: 20px;
+}
+header nav form h4{
+    font-weight: normal;
+    font-size: 17px;
+    margin-left: 30px;    
+}
+header nav form a{
+    font-weight: bold;    
 }
 .nav-link:hover{
     color: #FFF;
@@ -1132,6 +1150,9 @@ h5{
     color: #F6FAFC;
     max-width: 200px;
     margin-bottom: 20px;
+}
+.dir ul li a:hover{
+    text-decoration: none;
 }
 .dir ul li{
     display: inline;
