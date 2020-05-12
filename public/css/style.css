@@ -1,3 +1,22 @@
+/* scroll */
+   * {
+    scrollbar-width: thin;
+    scrollbar-color: #eeeeee 	#dddddf;
+  }
+  
+  /* Works on Chrome/Edge/Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+  *::-webkit-scrollbar-track {
+    background:#eeeeee; 
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color:  #eeeeee;
+    border-radius: 20px;
+    border: 3px solid  #dddddf;
+  }
+/* scroll */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap');
 body{
     margin: 0;
@@ -7,22 +26,23 @@ body{
     font-family: 'Roboto',Arial,sans-serif;
     
 }
-.alert-secondary{
-    height: 30px;
-    padding: 5px;
-    text-align: center;
-    font-size: 15px;
-    margin-top: 0;
-    margin-bottom: 3px;
-}
 a{
     color: #050505;
+    text-decoration: none;
+}
+header{
+    margin-bottom: 100px;
 }
 
-
-header{
+header nav{
     background-color:#FDFDFC;
     height: 80px;
+    
+}
+.nav-link:hover{
+    color: #FFF;
+    background: #d6d6d6;
+    border-radius: 5px;
 }
 header .btn:hover{
     background-color: #EEEEEE;
@@ -88,7 +108,7 @@ footer p{
 .news{
     height: 25vh;
     background-color:rgb(123,187,208,60%);
-    border-radius: 10px;
+    border-radius: 5px;
     margin-bottom: 50px;
     box-shadow: 7px 7px 2px 1px rgba(0, 0, 0, 0.2);
 }
@@ -139,7 +159,7 @@ footer p{
 
  .login{
     background-color:rgb(123,187,208, 60%);
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 50px auto;
     box-shadow: 7px 7px 2px 1px rgba(0, 0, 0, 0.2);
     height: 400px;
@@ -169,7 +189,7 @@ footer p{
     padding: 50px;
     background-color: #7BBBD0;
     margin: 50px auto;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .btn-cadastro{
@@ -177,7 +197,7 @@ footer p{
     padding: 5px 20px;
     background-color: #DBD5B6;
     color: black;
-    border-radius: 10px;
+    border-radius: 5px;
     font-weight: bold;
     font-size: 24px;
 }
@@ -230,7 +250,7 @@ form .btn-primary {
     height: 35px;
     background: #D5E5F2;
     border: 0.5px solid #AAAAAA;
-    border-radius: 10px;
+    border-radius: 5px;
   }
 
  /* pagina cadastro */
@@ -252,12 +272,12 @@ form .btn-primary {
 }
 
 .unic{
-    color: black;
+    color: #FFF;
 }
 .filter{
     width: 150px;
     background-color: #7BBBD0;
-    border-radius: 10px;
+    border-radius: 5px;
     margin-bottom: 50px;
     box-shadow: 7px 7px 2px 1px rgba(0, 0, 0, 0.2);
 
@@ -289,7 +309,7 @@ form .btn-primary {
     width: 900px;
     margin-left: 50px;
     background-color: #7BBBD0;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .ordernar-seletor{
     margin-left: 20px;
@@ -318,7 +338,7 @@ form .btn-primary {
     margin-right: 20px;
     width: 225px;
     height: 332px;
-    border-radius: 10px;
+    border-radius: 5px;
     margin-bottom: 50px;
     box-shadow: 7px 7px 2px 1px rgba(0, 0, 0, 0.2);
 }
@@ -331,8 +351,8 @@ form .btn-primary {
 .descricao{
     font-size: 10px;
     text-align: center;
+    text-decoration: none;
 }
-
 
 article{
     font-weight: bold;
@@ -370,7 +390,7 @@ article .right{
     margin-right: 20px;
     width: 225px;
     height: 332px;
-    border-radius: 10px;
+    border-radius: 5px;
     margin-bottom: 50px;
     box-shadow: 7px 7px 2px 1px rgba(0, 0, 0, 0.2);
 
@@ -407,14 +427,23 @@ article .right{
     max-height: 50px;
     margin-left: 40px;
     margin-right: 0;
+    padding: 5px;
 }
 .contador strong{
     font-size: 15px;
     margin-left: 5px;
+    margin: 0 5px;
+    padding: 8px;
 }
 
 /* loja virtual */
-
+#link-produto{
+    text-decoration: none;
+    text-align: center;
+}
+#link-produto:hover{
+    color: #fff;
+}
 /* info produto */
 .infoProduto{
     margin-top: 60px;
@@ -423,7 +452,7 @@ article .right{
     width: 750px;
     height: 400px;
     box-shadow: 7px 7px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+    border-radius: 5px;
 
 }
 
@@ -435,7 +464,7 @@ article .right{
     width: 300px;
     height: 400px;
     box-shadow: 7px 7px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .frete .de{
     margin-left: 20px;
@@ -470,7 +499,7 @@ article .right{
     width: 150px;
     height: 28px;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     margin-left: 70px;
 }
 .frete form button{
@@ -484,7 +513,7 @@ article .right{
 .btn-comprar{
     margin-top: 20px;
     margin-bottom: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
     font-weight: bold;
     margin-left: 60px;
     border: none;
@@ -503,7 +532,7 @@ article .right{
 .btn-adicionar{
     margin-top: 20px;
     margin-bottom: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
     font-weight: bold;
     margin-left: 60px;
     border: none;
@@ -547,7 +576,7 @@ article .right{
 }
 #infoItem{
     background-color: rgb(123,187,208,60%);
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 7px 7px 2px 1px rgba(0, 0, 0, 0.2);
     height: 160px;
     margin-bottom: 40px;
@@ -576,7 +605,7 @@ article .right{
 .pag{
     width: 553px;
     height: 400px;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 7px 7px 2px 1px rgba(0, 0, 0, 0.2);
     background-color: #7BBBD0;
     margin-top: 50px;
@@ -590,14 +619,14 @@ article .right{
 .pag .din{
     max-width: 80px;
     max-height: 86px;
-    border-radius: 24px;
+    border-radius: 5px;
     margin-left: 60px;
     margin-top: 13px;
 }
 .pag img{
     max-width: 148px;
     max-height: 120px;
-    border-radius: 20px;
+    border-radius: 5px;
     margin-left: 40px;
     margin-right: 40px;
 }
@@ -605,7 +634,7 @@ article .right{
     margin-top: 30px;
     background-color: #DBD5B6;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     text-align: center;
     font-size: 15px;
     font-weight: bold;
@@ -616,7 +645,7 @@ article .right{
 }
 .finalizar{
     background-color: #7BBBD0;
-    border-radius: 80px;
+    border-radius: 5px;
     width: 300px;
     height: 380px;
     padding: 20px;
@@ -632,14 +661,14 @@ article .right{
 }
 .finalizar mark{
     background-color: #DBD5B6;
-    border-radius: 10px;
+    border-radius: 5px;
     margin-left: 30px;
 }
 .finalizar button{
     margin-top: 80px;
     background-color: #DBD5B6;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     text-align: center;
     font-size: 15px;
     font-weight: bold;
@@ -651,7 +680,7 @@ article .right{
 .regras{
     box-shadow: 7px 7px 2px 1px rgba(0, 0, 0, 0.2);
     background-color: rgb(123,187,208,60%);
-    border-radius: 10px;
+    border-radius: 5px;
     font-weight: bold;
     font-size: 14px;
     padding: 20px 20px;
@@ -696,7 +725,7 @@ article .right{
     font-weight: bold;
     background-color: #DBD5B6;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     height: 20px;
     width: 150px;
     text-align: center;
@@ -708,7 +737,7 @@ article .right{
 .carrinho{
     margin-top: 50px;
     background-color:#7BBBD0;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 7px 7px 2px 1px rgba(0, 0, 0, 0.2);
     width: 960px;
     margin-bottom: 50px;
@@ -724,7 +753,7 @@ article .right{
     margin-left: 20px;
     max-width: 220px;
     max-height: 220px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .text{
     width: 400px;
@@ -759,14 +788,14 @@ article .right{
 .text mark{
     margin-left: 30px;
     background-color: #DBD5B6;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .valores{
     margin-top: 70px;
     background-color: #5D8E9E;
     width: 300px;
     height: 194px;
-    border-radius: 80px;
+    border-radius: 5px;
     font-size: 17px;
     font-weight: bold;
     padding-left: 30px;
@@ -801,10 +830,11 @@ article .right{
     height: 30px;
     border-radius: 5px;
     border: none;
+    padding: 10px;
 }
 .carrinho form button{
     background-color: #DBD5B6;
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
     height: 30px;
     margin-left: 20px;
@@ -831,7 +861,7 @@ article .right{
 .regras{
     box-shadow: 7px 7px 2px 1px rgba(0, 0, 0, 0.2);
     background-color: rgb(123,187,208,60%);
-    border-radius: 10px;
+    border-radius: 5px;
     font-weight: bold;
     font-size: 14px;
     padding: 20px 20px;
@@ -840,7 +870,7 @@ article .right{
 }
 .btn-carrinho{
     margin-left: 25vw !important;
-    border-radius: 10px;
+    border-radius: 5px;
     font-weight: bold;
     margin-left: 60px;
     border: none;
@@ -849,7 +879,9 @@ article .right{
     height: 39px;
     text-align: left;
     letter-spacing: 1px;
-    margin-bottom: 20px;    
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center;  
 }
 
 /* carrinho */
@@ -857,7 +889,7 @@ article .right{
 /* pag cliente */
 
 .cliente{
-    border-radius: 40px;
+    border-radius: 5px;
     background-color: rgb(123,187,208,60%);
     color: #F6FAFC;
     margin-top: 50px;
@@ -890,7 +922,7 @@ article .right{
     width: 134px;
     height: 30px;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     font-size: 18px;
     font-weight: bold;
     text-align: right;
@@ -931,7 +963,7 @@ article .right{
     height: 26px;
     font-size: 20px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
     margin: 40px 0px 20px 20px;
     font-size: 15px;
@@ -967,7 +999,7 @@ h5{
     margin-top: 30px;
     background-color: #DBD5B6;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     text-align: center;
     font-size: 15px;
     font-weight: bold;
@@ -1019,7 +1051,7 @@ h5{
     margin: 50px 300px;
     width: 297px;
     height: 40px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
     background-color: #DBD5B6;
     font-weight: bold;
@@ -1031,12 +1063,12 @@ h5{
   /* pag index */
   .carousel-item{
     max-height: 600px;
-    border-radius: 10px;
+    border-radius: 5px;
 
 }
 #carouselExampleCaptions{
     margin-top: 50px;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 7px 7px 2px 1px rgba(0, 0, 0, 0.2);
     margin-bottom: 50px;
 
@@ -1045,7 +1077,7 @@ h5{
     background-color: rgb(123,187,208,60%);
     margin-bottom: 50px;
     margin-right: 50px;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 7px 7px 2px 1px rgba(0, 0, 0, 0.2);
     width: 800px;
     height: 430px;
@@ -1076,7 +1108,7 @@ h5{
     background-color: rgb(123,187,208,60%);
     box-shadow: 7px 7px 2px 1px rgba(0, 0, 0, 0.2);
     max-height: 700px;
-    border-radius: 10px;
+    border-radius: 5px;
     width: 270px;
     text-align: center;
     margin-bottom: 50px;
@@ -1117,7 +1149,7 @@ h5{
 .mapa{
     background-color:rgb(123,187,208,60%);
     width: 100%;
-    border-radius: 40px;
+    border-radius: 5px;
     box-shadow: 7px 7px 2px 1px rgba(0, 0, 0, 0.2);
     margin-top: 50px;
     margin-bottom: 50px;
@@ -1191,7 +1223,7 @@ h5{
     text-align: center;
     font-weight: bold;
     font-size: 17px;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 0 0 0 30px;
     border: none;
     background-color: #DBD5B6;
@@ -1247,7 +1279,7 @@ height: 39px;
 
 background: #DBD5B6;
 border: none;
-border-radius: 10px;
+border-radius: 5px;
 }
 /* pagina admin */
 
@@ -1259,7 +1291,7 @@ border-radius: 10px;
         width: 65vw;
         margin-left: 70px;
         background-color: #7BBBD0;
-        border-radius: 10px;
+        border-radius: 5px;
     }
     .ordernar-seletor{
         margin-left: 40px;
@@ -1472,7 +1504,7 @@ border-radius: 10px;
         margin-right: 20px;
         width: 225px;
         height: 332px;
-        border-radius: 10px;
+        border-radius: 5px;
         margin-bottom: 50px;
         box-shadow: 7px 7px 2px 1px rgba(0, 0, 0, 0.2);
     }
