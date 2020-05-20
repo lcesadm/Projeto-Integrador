@@ -1,23 +1,27 @@
 const Sequelize = require("sequelize");
-const config = require("../configs/database");
+const config = require("../config/database");
 const bcrypt = require("bcrypt");
+
+const { produtos } = require("../models");
+
+const {carrinhos} = require("../models");
+
+
 
 
 const bodyController = {
     home: async(req, res) => {
       const con = new Sequelize(config);
 
-        
-
-        const produtos = await con.query("select * from produtos",
+        const produtosDb = await con.query("select * from produtos",
           {
             type: Sequelize.QueryTypes.SELECT,
           }
         );
-        return res.render("index", {usuario: req.session.usuario, produtos: produtos});
+        return res.render("index", {usuario: req.session.usuario, produtos: produtosDb, quantItens: req.session.count});
     },
     noticia: (req, res) => {
-        return res.render("noticia", {usuario: req.session.usuario});
+        return res.render("noticia", {usuario: req.session.usuario, quantItens: req.session.count});
     },
     cadastro: (_req, res) => {
         return res.render("cadastro");
@@ -26,30 +30,31 @@ const bodyController = {
     
     
     finalizar: (req, res) => {
-        return res.render("finalizar", {usuario: req.session.usuario});
+        return res.render("finalizar", {usuario: req.session.usuario, quantItens: req.session.count});
     },
     carrinho: async (req, res) => {
     
-      const con = new Sequelize(config);
+
       let id = req.session.usuario.id;
 
-      const produtos = await con.query(
-        "select * from carrinho where id_usuario=:usuario_id;",
+
+
+      const carrinhosDb = await carrinhos.findAll(
         {
-          replacements: {
-            usuario_id: id
+          where: {
+            id_usuario: id
         },
           type: Sequelize.QueryTypes.SELECT,
         }
       );
 
-      return res.render("carrinho", {usuario: req.session.usuario, carrinho: produtos});
+      return res.render("carrinho", {usuario: req.session.usuario, carrinho: carrinhosDb, quantItens: req.session.count});
 
   },
     cliente: (req, res) => {
 
       
-      return res.render("cliente", {usuario: req.session.usuario});
+      return res.render("cliente", {usuario: req.session.usuario, quantItens: req.session.count});
   },
     
 
@@ -58,11 +63,19 @@ const bodyController = {
     },
     
     mapa: (req, res) => {
-        return res.render("mapa", {usuario: req.session.usuario});
+        return res.render("mapa", {usuario: req.session.usuario, quantItens: req.session.count});
     },
     paginaAdmin: async(req, res) => {
       const con = new Sequelize(config);
       let id = req.session.usuario.id;
+
+
+
+        let quantItens = await carrinhos.count({
+          where: {
+            id_usuario: id
+          }
+        })
 
       const produtos = await con.query(
         "select * from produtos where id_usuario=:usuario_id;",
@@ -75,7 +88,7 @@ const bodyController = {
       );
         
 
-        return res.render("paginaAdmin", {usuario: req.session.usuario, produtos: produtos});
+        return res.render("paginaAdmin", {usuario: req.session.usuario, produtos: produtos, quantItens});
     }
 };
 

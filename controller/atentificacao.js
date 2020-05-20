@@ -1,6 +1,10 @@
 const Sequelize = require("sequelize");
-const config = require("../configs/database");
+const config = require("../config/database");
 const bcrypt = require("bcrypt");
+const { usuarios } = require("../models");
+const {carrinhos} = require("../models");
+
+
 
 const autentificacao = {
     validando:(req,res,next)=>{
@@ -12,17 +16,14 @@ const autentificacao = {
     },
     validatorLogin: async (req, res) => {
         const { email, password } = req.body;
-        const con = new Sequelize(config);
     
-        const [usuario] = await con.query(
-          "select * from usuario where email=:email;",
-          {
-            replacements: {
+        const [usuario] = await usuarios.findAll({
+          
+            where: {
               email,
-            },
-            type: Sequelize.QueryTypes.SELECT,
-          }
-        );
+            }
+            
+        });
     
         if (!usuario || !bcrypt.compareSync(password, usuario.password)) {
           return res.render("login", {
@@ -40,6 +41,24 @@ const autentificacao = {
           nascimento: usuario.nascimento,
           sexo: usuario.sexo,
         };
+
+
+
+        let id = req.session.usuario.id;
+
+        count = await carrinhos.count({
+          where: {
+            id_usuario: id
+          }
+        })
+
+        req.session.count = {
+          count: count,
+        };
+
+        console.log(count)
+        
+      
             return res.redirect("cliente");
       
     

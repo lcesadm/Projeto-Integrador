@@ -180,7 +180,7 @@
                   </nav>
                   <div class="produtos-pai">
                     <div class="row">
-                      <% produtos.forEach(element => {%> 
+                      <% produtosDb.forEach(element => {%> 
 
                     <div class="produtos">
                       <a href="/infoProdutos/<%= element.id_produto %>">
@@ -188,8 +188,8 @@
                         <article>
                             <p class="titulo"><%= element.nome_produto %></p>
                             <div class="row">
-                            <p class="left">De <em><%= element.valor %></em></p>
-                            <P class="right"><%= element.valor %></P>
+                            <p class="left">De R$<em><%= element.valor %>,00</em></p>
+                            <P class="right">Por R$<%= element.valor %>,00</P>
                             </div>
                         </article>
                       </a>

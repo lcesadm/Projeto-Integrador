@@ -2,7 +2,7 @@
 
     <main class="container carrinho">
         <div id="carrinho">
-            <h1>Carrinho de Compras</h1>
+            <h1 class="titulo-carrinho">Carrinho de Compras</h1>
 
             <!-- intens no carrinho-->
             <% carrinho.forEach(element => {%> 
@@ -16,8 +16,12 @@
                     <h2>Elegível para Frete GRÁTIS</h2>
                     <h3>Este pedido é para presente ? <input type="checkbox" class="check"><b>Sim </b></h2>
                         <div class="quant">
-                            <p><mark>Quant.</mark> <mark> <%= element.quantidade %> </mark></p>
+                            <p><mark>Quant.</mark> <mark> <%= element.quantidade_produto %> </mark></p>
                         </div>
+
+                        
+                        
+                        
                 </div>
                 <div class="valores">
                     <p>Valor Unitario: <b>R$ <%= element.valor_produto %></b></p>
@@ -26,7 +30,12 @@
                     <hr>
                     <p>Valor Total: <b>R$ 25,99</b></p>
                 </div>
+                <form action="/carrinho" method="post">
+                    <input type="text" value="<%= element.id_produto %>" style="display: none;" readonly name="id_produto">
+                    <button class="remove_carrinho" type="submit" >Remover do carrinho</button>
+                  </form>
                 <hr>
+                
             </div>
             <% }) %>
             <!-- finaliza item-->

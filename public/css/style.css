@@ -533,16 +533,16 @@ article .right{
     margin-bottom: 20px;
     border-radius: 5px;
     font-weight: bold;
-    margin-left: 60px;
+    margin-left: 60px !important;
     border: none;
-    background-color: #DBD5B6;
-    width: 185px;
+    background-color: #DBD5B6 !important;
+    width: 185px !important;
     height: 39px;
     text-align: left;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-.btn-comprar img{
+.btn-comprar .img{
     margin-left: 20px;
     max-width: 30px;
     max-height: 30px;
@@ -752,6 +752,9 @@ article .right{
 /* finalizar pedido */
 
 /* carrinho */
+.titulo-carrinho{
+    text-align: center;
+}
 .carrinho{
     margin-top: 50px;
     background-color:#7BBBD0;
@@ -769,8 +772,8 @@ article .right{
 .carrinho img{
     margin-top: 50px;
     margin-left: 20px;
-    max-width: 220px;
-    max-height: 220px;
+    max-width: 150px;
+    max-height: 150px;
     border-radius: 5px;
 }
 .text{
@@ -781,18 +784,20 @@ article .right{
     font-size: 18px;
     font-weight: normal;
     line-height: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 .text h2{
-    font-size: 18px;
+    font-size: 15px;
     margin-top: 10px;
     margin-left: 50px;
-    font-weight: bold;
+    font-weight: normal;
     margin-bottom: 20px;
 }
 .text h3{
-    font-size: 18px;
+    font-size: 15px;
     margin-left: 50px;
-    font-weight: bold;
+    font-weight: normal;
 }
 .text b{
     font-size: 14px;
@@ -809,6 +814,7 @@ article .right{
     border-radius: 5px;
 }
 .valores{
+    margin-bottom: 40px;
     margin-top: 70px;
     background-color: #5D8E9E;
     width: 300px;
@@ -836,10 +842,13 @@ article .right{
 .carrinho form{ 
     margin-bottom: 40px;
     margin-left: 50px;
+    
 }
 .carrinho form label{
+    font-weight: normal;
+    font-size: 17px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 17px;
     margin-right: 20px;
 }
 
@@ -858,22 +867,26 @@ article .right{
     margin-left: 20px;
 }
 .carrinho .p{
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 17px;
+    font-weight: normal;
     margin-left: 20px;
 }
 .carrinho .p strong{
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 17px;
+    font-weight: normal;
 }
 .carrinho .total{
-    font-size: 20px;
-    font-weight: bold;
-    margin-left: 80px;
+    font-size: 17px;
+    font-weight: normal;
+    margin-left: 40px;
 }
 .carrinho .total strong{
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 17px;
+    font-weight: normal;
+}
+.remove_carrinho{
+    width: 180px;
+    
 }
 
 .regras{
@@ -1254,6 +1267,7 @@ h5{
 
 
 /* pagina admin */
+
 .vendidos h2{
     width: 100%;
     padding-top: 20px;

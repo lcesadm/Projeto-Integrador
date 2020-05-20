@@ -1,33 +1,49 @@
 const Sequelize = require("sequelize");
-const config = require("../configs/database");
 const bcrypt = require("bcrypt");
+const {carrinhos} = require("../models");
 
-const carrinho = {
+const carrinhoController = {
     store: async (req, res) => {
-        const con = new Sequelize(config);
         const {nome_produto, valor_produto, id_produto, descricao_produto, foto_produto} = req.body;
-        const {usuario} = req.session;
+        let id = req.session.usuario.id;
+
+        let valorTotal = 1*valor_produto;
+
+        console.log(valorTotal);
         
 
-        const carrinho = await con.query(
-            "INSERT INTO carrinho (nome_produto, valor_produto, id_produto, quantidade, descricao_produto, foto_produto, id_usuario) values (:nome_produto, :valor_produto, :id_produto, :quantidade, :descricao_produto, :foto_produto, :id_usuario)",
+        const carrinhoDb = await carrinhos.create(
             {
-              replacements: {
                 nome_produto,
                 valor_produto,
                 id_produto,
-                quantidade: 1,
+                quantidade_produto: 1,
                 descricao_produto,
                 foto_produto,
-                id_usuario: usuario.id,
-              },
-              type: Sequelize.QueryTypes.INSERT,
-            }
-            );
+                id_usuario: id,
+                valor_total_produto: valorTotal,
+            });
 
             return res.redirect("/carrinho");
+    },
 
-    }
+    remove: async (req, res) => {
+        const {id_produto} = req.body;
+        let id = req.session.usuario.id;
+
+
+        
+
+        await carrinhos.destroy(
+            {
+                where: {
+                    id_produto,
+                    id_usuario: id,
+                }
+            });
+
+            return res.redirect("/carrinho");
+        }
 }
 
-module.exports = carrinho;
+module.exports = carrinhoController;

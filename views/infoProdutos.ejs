@@ -30,8 +30,16 @@
                     </form>
                 </div>
                 <hr>
-                <a href="/finalizar"><button type="submit" class="btn-comprar">Comprar :) <img src="/img/ecomerce/carrinho.png"></button></a>
-                <a href="/carrinho"><button type="submit" class="btn-adicionar">Adicionar <img src="/img/ecomerce/carrinho.png"></button></a>
+                <form action="/ecomerce" method="post">
+                    <input type="text" value="<%= element.id_produto %>" style="display: none;" readonly name="id_produto">
+                    <input type="text" value="<%= element.nome_produto %>" style="display: none;" readonly name="nome_produto">
+                    <input type="text" value="<%= element.valor %>" style="display: none;" readonly name="valor_produto">
+                    <input type="text" value="<%= element.descricao %>" style="display: none;" readonly name="descricao_produto">
+                    <input type="text" value="<%= element.foto %>" style="display: none;" readonly name="foto_produto">
+                    <button type="submit" class="btn-comprar">Comprar :) <img src="/img/ecomerce/carrinho.png" class="img"></button>
+                </form>
+               
+                
             </div>
             <% }); %>
 
