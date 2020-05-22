@@ -10,6 +10,8 @@ const autenController = require("../controller/atentificacao");
 const produtosController = require("../controller/produtos");
 const regisController = require("../controller/registrar");
 const carrinhoController = require("../controller/carrinho");
+const pedidoController = require("../controller/pedidoController");
+
 
 
 
@@ -33,6 +35,9 @@ router.get('/ecomerce', produtosController.ecomerce);
 router.post('/ecomerce',autenController.validando ,carrinhoController.store);
 
 router.get('/finalizar', autenController.validando, bodyController.finalizar);
+router.post('/finalizar', autenController.validando, pedidoController.storePedido);
+
+
 router.get('/infoProdutos/:id', produtosController.infoProdutos);
 
 

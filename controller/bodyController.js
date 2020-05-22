@@ -1,6 +1,8 @@
 const Sequelize = require("sequelize");
 const config = require("../config/database");
 const bcrypt = require("bcrypt");
+const crypto = require("crypto");
+
 
 const { produtos } = require("../models");
 
@@ -30,7 +32,10 @@ const bodyController = {
     
     
     finalizar: (req, res) => {
-        return res.render("finalizar", {usuario: req.session.usuario, quantItens: req.session.count});
+
+      let idFinalizer = crypto.randomBytes(4).toString('HEX')
+
+        return res.render("finalizar", {usuario: req.session.usuario, quantItens: req.session.count, idFinalizer});
     },
     carrinho: async (req, res) => {
     

@@ -12,7 +12,7 @@
                   <label for="inputPassword4">Senha:</label>
                   <input name="password" type="password" class="form-control" id="inputPassword4" placeholder="Senha">
                   <label for="inputEmail4">CPF:</label>
-                  <input name="CPF" type="text" class="form-control" id="inputEmail4" placeholder="CPF">
+                  <input name="CPF" type="text" maxlength="14" class="form-control" id="inputEmail4" placeholder="CPF" onkeypress="$(this).mask('###.###.###-##')">
                 </div>
                 <div class="rigth">
                   <label for="inputPassword4">Nome completo:</label>

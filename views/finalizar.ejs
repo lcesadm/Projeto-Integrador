@@ -50,8 +50,10 @@
                 </div>
 
                 <div class="finalizar">
-                    <h2>Nº Pedido <mark>00000001</mark></h2>
-                    <a href="cliente"><button type="button">Finalizar</button></a>
+                    <h2>Nº Pedido <mark><%= idFinalizer %></mark></h2>
+                    <form action="/finalizar" method="post">
+                        <button type="submit">Finalizar</button>
+                    </form>
                 </div>
             </div>
         </div>

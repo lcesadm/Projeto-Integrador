@@ -9,29 +9,38 @@ module.exports = {
       Example:
       return queryInterface.createTable('users', { id: Sequelize.INTEGER });
     */
-   return queryInterface.createTable('pedido', { 
-    id_pedido:{
-       type: Sequelize.INTEGER,
-       primaryKey: true,
-       autoIncrement: true,
-       },
-     endereco:{
+   return queryInterface.createTable('pedidos', {
+     id:{
        type: Sequelize.STRING,
-      },
-     pedido_status:{
-       type: Sequelize.INTEGER,
-      },
-     data_pedido:{
-       type: Sequelize.DATE,
-      },
-     id_usuario:{
-       type: Sequelize.INTEGER,
-      },
-     id_carrinho:{
+       primaryKey: true,
+       allowNull: false,
+     }, 
+    id_usuario:{
+      type: Sequelize.INTEGER,
+      allowNull: false,
+      references: {
+        model: "usuarios",
+        key: "id_usuario",
+        }
+    },
+    id_produto:{
+      type: Sequelize.INTEGER,
+      allowNull: false,
+    },
+    nome_produto:{
+      type: Sequelize.STRING,
+    },
+    quantidade_produto:{
       type: Sequelize.INTEGER,
     },
+    valor_produto:{
+      type: Sequelize.DECIMAL,
+    },
+    valor_total_produto:{
+      type: Sequelize.DECIMAL,
+    },
     createdAt: Sequelize.DATE,
-      updatedAt: Sequelize.DATE,
+    updatedAt: Sequelize.DATE,
      });
 
  },
@@ -45,7 +54,7 @@ module.exports = {
       return queryInterface.dropTable('users');
 
     */
-   return queryInterface.dropTable('pedido');
+   return queryInterface.dropTable('pedidos');
 
   }
 };
