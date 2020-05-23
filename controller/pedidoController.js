@@ -28,30 +28,32 @@ const pedidoController = {
                       type: Sequelize.QueryTypes.SELECT,
                     }
                   );
-                    for (let i = 0; i < quantItens; i++) {
 
-                        carrinhosDb.forEach(async element => {
-                           await Pedido.create({
-                                id: idPedido,
-                                id_produto: element.dataValues.id_produto,
-                                nome_produto: element.dataValues.nome_produto,
-                                quantidade_produto: element.dataValues.quantidade_produto, 
-                                id_usuario: id,
-                                valor_produto: element.dataValues.valor_produto,
-                                valor_total_produto: element.dataValues.valor_total_produto,
-                                createdAt: new Date(),
-                                updatedAt: new Date(),
-                            });
-                            await carrinhos.destroy(
-                                {
-                                    where: {
-                                        id_produto: element.dataValues.id_produto,
-                                    }
-                                });    
+                  console.log(carrinhosDb);
+                    // for (let i = 0; i < quantItens; i++) {
+
+                    //     carrinhosDb.forEach(async element => {
+                    //        await Pedido.create({
+                    //             id: idPedido,
+                    //             id_produto: element.dataValues.id_produto,
+                    //             nome_produto: element.dataValues.nome_produto,
+                    //             quantidade_produto: element.dataValues.quantidade_produto, 
+                    //             id_usuario: id,
+                    //             valor_produto: element.dataValues.valor_produto,
+                    //             valor_total_produto: element.dataValues.valor_total_produto,
+                    //             createdAt: new Date(),
+                    //             updatedAt: new Date(),
+                    //         });
+                    //         await carrinhos.destroy(
+                    //             {
+                    //                 where: {
+                    //                     id_produto: element.dataValues.id_produto,
+                    //                 }
+                    //             });    
                             
-                        });
+                    //     });
                                               
-                    }
+                    // }
 
                     // return string = element.dataValues.id_produto;
                     // let value = string.concat(string);

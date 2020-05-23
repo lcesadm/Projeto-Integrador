@@ -23,63 +23,42 @@
         </div>
         <hr class="hr">
         <h2>Endereço</h2>
-        <form>
+        <form action="/cliente" method="POST">
             <div class="row">
-              <div class="col-5">
-                <label for="Rua">Digite o nome da sua rua:</label>
-                <input type="text" class="form-control rua" id="formGroupExampleInput" placeholder="Digite o nome da sua rua com o numero" name="Rua" value="<%= usuario.endereco %>">
-              </div>
-            
-                <div class="col-5">
-                <label for="Complemento">Complemento:</label>
-                <input type="text" class="form-control Complemento" id="formGroupExampleInput" placeholder="Complemento" name="Complemento">
-                </div>
 
-                <div class="col-5">
-                    <label for="cep">Cep:</label>
-                    <input type="text" class="form-control cep" id="formGroupExampleInput" name="cep" maxlength="8" OnKeyPress="formatar('#####-###', this)" placeholder="_ _ _ _ _ - _ _ _">
-                </div>
+              <div class="col-5">
+                <label for="cep">Cep:</label>
+                <input type="text" class="form-control" id="cep" name="cep" maxlength="8" placeholder="<%= enderecoDb.cep %>" onblur="pesquisacep(this.value);" >
+              </div>
+
+              <div class="col-5">
+                <label for="Rua">Rua:</label>
+                <input type="text" class="form-control rua" id="rua" placeholder="rua" name="logradouro">
+              </div>
 
                 <div class="col-5 estado">
                     <label for="estado">Estado</label>
-                    <select class="form-control" id="exampleInputCountry" name="estado">
-                      <option value="" selected="selected">Selecione um estado</option>
-                      <option value="United States">Acre</option>
-                      <option value="United Kingdom">Alagoas</option>
-                      <option value="Afghanistan">Amapá</option>
-                      <option value="Albania">Amazonas</option>
-                      <option value="Algeria">Bahia</option>
-                      <option value="United States">Ceará</option>
-                      <option value="United Kingdom">Distrito Federal</option>
-                      <option value="Afghanistan">Espiríto Santo</option>
-                      <option value="Albania">Goiás</option>
-                      <option value="Algeria">Maranhão</option>
-                      <option value="United States">Mato Grosso</option>
-                      <option value="United Kingdom">Mato grosso do sul</option>
-                      <option value="Afghanistan">Minas Gerais</option>
-                      <option value="Albania">Pará</option>
-                      <option value="Algeria">Paraíba</option>
-                      <option value="United States">Paraná</option>
-                      <option value="United Kingdom">Pernambuco</option>
-                      <option value="Afghanistan">Piauí</option>
-                      <option value="Albania">Rio de Janeiro</option>
-                      <option value="Algeria">Rio Grande Do Norte</option>
-                      <option value="Albania">Rio Grande Do Sul</option>
-                      <option value="Algeria">Rondônia</option>
-                      <option value="United States">Roraima</option>
-                      <option value="United Kingdom">Santa Catarina</option>
-                      <option value="Afghanistan">São Paulo</option>
-                      <option value="Albania">Sergipe</option>
-                      <option value="Algeria">Tocantins</option>
-                    </select>
+                    <input type="text" class="form-control" id="uf" placeholder="UF" name="uf" readonly>
                 </div>
 
                 <div class="col-5">
                     <label for="cidade">Cidade:</label>
-                    <input type="text" class="form-control cidade" id="formGroupExampleInput" placeholder="Digite o nome da sua cidade" name="cidade">
+                    <input type="text" class="form-control cidade" id="cidade" placeholder="Cidade" name="cidade" readonly>
                 </div>
+                <div class="col-5">
+                  <label for="cidade">Bairro:</label>
+                  <input type="text" class="form-control" id="bairro" placeholder="Bairro" name="bairro" readonly>
+              </div>
+                <div class="col-5">
+                  <label for="cidade">Numero:</label>
+                  <input type="text" class="form-control" id="numero" placeholder="Digite o seu numero" name="numero">
+              </div>
+              <div class="col-5">
+                <label for="Complemento">Complemento:</label>
+                <input type="text" class="form-control" id="complemento" placeholder="Complemento" name="complemento">
+              </div>
 
-                <button type="button">Adicionar mais de um endereço</button>
+                <button type="submit">Atualizar endereço</button>
 
             </div>   
         </form>

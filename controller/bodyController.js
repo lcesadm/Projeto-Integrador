@@ -7,6 +7,8 @@ const crypto = require("crypto");
 const { produtos } = require("../models");
 
 const {carrinhos} = require("../models");
+const {enderecos} = require("../models");
+
 
 
 
@@ -56,10 +58,21 @@ const bodyController = {
       return res.render("carrinho", {usuario: req.session.usuario, carrinho: carrinhosDb, quantItens: req.session.count});
 
   },
-    cliente: (req, res) => {
+    cliente: async (req, res) => {
+      let id = req.session.usuario.id;
+
+
+      const enderecoDb = await enderecos.findAll(
+        {
+          where: {
+            id_usuario: id
+        },
+          type: Sequelize.QueryTypes.SELECT,
+        }
+      );
 
       
-      return res.render("cliente", {usuario: req.session.usuario, quantItens: req.session.count});
+      return res.render("cliente", {usuario: req.session.usuario, quantItens: req.session.count, enderecoDb});
   },
     
 

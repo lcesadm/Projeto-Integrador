@@ -11,11 +11,7 @@ const produtosController = require("../controller/produtos");
 const regisController = require("../controller/registrar");
 const carrinhoController = require("../controller/carrinho");
 const pedidoController = require("../controller/pedidoController");
-
-
-
-
-
+const clienteController = require("../controller/clienteController");
 
 
 
@@ -30,9 +26,14 @@ router.post('/carrinho', autenController.validando ,carrinhoController.remove);
 
 
 router.get('/cliente', autenController.validando, bodyController.cliente);
+router.post('/cliente', autenController.validando, clienteController.update);
+
 
 router.get('/ecomerce', produtosController.ecomerce);
 router.post('/ecomerce',autenController.validando ,carrinhoController.store);
+
+router.get('/ecomerce/:id', produtosController.ecomerceId);
+router.post('/ecomerce/:id',autenController.validando ,carrinhoController.store);
 
 router.get('/finalizar', autenController.validando, bodyController.finalizar);
 router.post('/finalizar', autenController.validando, pedidoController.storePedido);

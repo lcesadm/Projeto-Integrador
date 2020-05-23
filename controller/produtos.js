@@ -5,7 +5,7 @@ const { produtos } = require("../models");
 
 const produtosController = {
     storeProduto: async (req, res) => {
-        const {nome_produto, valor, descricao, id_usuario} = req.body;
+        const {nome_produto, valor, descricao, categoria} = req.body;
         const [foto] = req.files;
         let id = req.session.usuario.id;
 
@@ -16,6 +16,7 @@ const produtosController = {
                 valor,
                 descricao, 
                 id_usuario: id,
+                categoria,
                 foto: foto.filename,
                 createdAt: new Date(),
                 updatedAt: new Date(),
@@ -26,6 +27,20 @@ const produtosController = {
     ecomerce: async (req, res) => {
   
         const produtosDb = await produtos.findAll();
+      
+          return res.render("ecomerce", {usuario: req.session.usuario, produtosDb, quantItens: req.session.count});
+      },
+      ecomerceId: async (req, res) => {
+  
+        const id = req.params.id;
+
+        const produtosDb = await produtos.findAll(
+          {
+            where: {
+              categoria: id
+            }
+          }
+        );
       
           return res.render("ecomerce", {usuario: req.session.usuario, produtosDb, quantItens: req.session.count});
       },

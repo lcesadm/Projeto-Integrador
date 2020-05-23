@@ -33,6 +33,10 @@ module.exports = (sequelize, DataTypes) =>{
     //   key: "id_usuario"
     //   },
   },
+  categoria:{
+    type: DataTypes.INTEGER,
+    allowNull: false
+  },
   createdAt: DataTypes.DATE,
   updatedAt: DataTypes.DATE,
   });

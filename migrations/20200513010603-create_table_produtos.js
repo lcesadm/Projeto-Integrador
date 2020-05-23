@@ -43,6 +43,10 @@ module.exports = {
       key: "id_usuario",
       }
   },
+  categoria:{
+    type: Sequelize.INTEGER,
+    allowNull: false
+  },
   createdAt: Sequelize.DATE,
   updatedAt: Sequelize.DATE,
   });
