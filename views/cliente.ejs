@@ -26,37 +26,83 @@
         <form action="/cliente" method="POST">
             <div class="row">
 
+              <% if(enderecoDb.length < 1) {%>
+
+                <div class="col-5">
+                  <label for="cep">Cep:</label>
+                  <input type="text" class="form-control" id="cep" name="cep" maxlength="8" placeholder="Digite seu cep" onblur="pesquisacep(this.value);" >
+                </div>
+  
+                <div class="col-5">
+                  <label for="Rua">Rua:</label>
+                  <input type="text" class="form-control rua" id="rua" placeholder="Rua" name="logradouro"readonly>
+                </div>
+  
+                  <div class="col-5 estado">
+                      <label for="estado">Estado</label>
+                      <input type="text" class="form-control" id="uf" placeholder="Estado" name="uf" readonly>
+                  </div>
+  
+                  <div class="col-5">
+                      <label for="cidade">Cidade:</label>
+                      <input type="text" class="form-control cidade" id="cidade" placeholder="Cidade" name="cidade" readonly>
+                  </div>
+                  <div class="col-5">
+                    <label for="cidade">Bairro:</label>
+                    <input type="text" class="form-control" id="bairro" placeholder="Bairro" name="bairro" readonly>
+                </div>
+                  <div class="col-5">
+                    <label for="cidade">Numero:</label>
+                    <input type="text" class="form-control" id="numero" placeholder="Digite seu numero" name="numero">
+                </div>
+                <div class="col-5">
+                  <label for="Complemento">Complemento:</label>
+                  <input type="text" class="form-control" id="complemento" placeholder="Digite seu complemento" name="complemento">
+                </div>
+
+
+                <% }else { %>
+
+
+                  <% enderecoDb.forEach(element => {%> 
+
+
               <div class="col-5">
                 <label for="cep">Cep:</label>
-                <input type="text" class="form-control" id="cep" name="cep" maxlength="8" placeholder="<%= enderecoDb.cep %>" onblur="pesquisacep(this.value);" >
+                <input type="text" class="form-control" id="cep" name="cep" maxlength="8" placeholder="<%= element.cep %>" onblur="pesquisacep(this.value);" >
               </div>
 
               <div class="col-5">
                 <label for="Rua">Rua:</label>
-                <input type="text" class="form-control rua" id="rua" placeholder="rua" name="logradouro">
+                <input type="text" class="form-control rua" id="rua" placeholder="<%= element.logradouro %>" name="logradouro"readonly>
               </div>
 
                 <div class="col-5 estado">
                     <label for="estado">Estado</label>
-                    <input type="text" class="form-control" id="uf" placeholder="UF" name="uf" readonly>
+                    <input type="text" class="form-control" id="uf" placeholder="<%= element.uf %>" name="uf" readonly>
                 </div>
 
                 <div class="col-5">
                     <label for="cidade">Cidade:</label>
-                    <input type="text" class="form-control cidade" id="cidade" placeholder="Cidade" name="cidade" readonly>
+                    <input type="text" class="form-control cidade" id="cidade" placeholder="<%= element.cidade %>" name="cidade" readonly>
                 </div>
                 <div class="col-5">
                   <label for="cidade">Bairro:</label>
-                  <input type="text" class="form-control" id="bairro" placeholder="Bairro" name="bairro" readonly>
+                  <input type="text" class="form-control" id="bairro" placeholder="<%= element.bairro %>" name="bairro" readonly>
               </div>
                 <div class="col-5">
                   <label for="cidade">Numero:</label>
-                  <input type="text" class="form-control" id="numero" placeholder="Digite o seu numero" name="numero">
+                  <input type="text" class="form-control" id="numero" placeholder="<%= element.numero %>" name="numero">
               </div>
               <div class="col-5">
                 <label for="Complemento">Complemento:</label>
-                <input type="text" class="form-control" id="complemento" placeholder="Complemento" name="complemento">
+                <input type="text" class="form-control" id="complemento" placeholder="<%= element.complemento %>" name="complemento">
               </div>
+              <% }); %>
+
+              <% } %>
+
+
 
                 <button type="submit">Atualizar endereço</button>
 

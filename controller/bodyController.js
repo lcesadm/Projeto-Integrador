@@ -71,8 +71,16 @@ const bodyController = {
         }
       );
 
+      let soma = 2
+
+      enderecoDb.forEach(element => {
+        soma = element.numero + soma;
+      });
+     
+      console.log(soma);
+
       
-      return res.render("cliente", {usuario: req.session.usuario, quantItens: req.session.count, enderecoDb});
+      return res.render("cliente", {usuario: req.session.usuario, quantItens: req.session.count, enderecoDb: enderecoDb});
   },
     
 
