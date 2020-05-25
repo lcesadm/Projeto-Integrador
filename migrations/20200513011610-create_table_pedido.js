@@ -23,6 +23,9 @@ module.exports = {
         key: "id_usuario",
         }
     },
+    id_endereco:{
+      type: Sequelize.INTEGER,
+    },
     id_produto:{
       type: Sequelize.INTEGER,
       allowNull: false,

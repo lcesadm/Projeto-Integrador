@@ -3,13 +3,15 @@ const bcrypt = require("bcryptjs");
 const { produtos } = require("../models");
 
 
+
+
 const produtosController = {
     storeProduto: async (req, res) => {
         const {nome_produto, valor, descricao, categoria} = req.body;
         const [foto] = req.files;
         let id = req.session.usuario.id;
 
-        console.log(produtos);
+        console.log(id);
 
         const produtosDb = await produtos.create({
                 nome_produto,
@@ -18,6 +20,7 @@ const produtosController = {
                 id_usuario: id,
                 categoria,
                 foto: foto.filename,
+                vendidos: 0,
                 createdAt: new Date(),
                 updatedAt: new Date(),
             });

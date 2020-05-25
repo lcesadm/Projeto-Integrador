@@ -17,7 +17,6 @@ module.exports = {
        },
        foto_produto:{
         type: Sequelize.STRING,
-        unique: true,
       },
      nome_produto:{
        type: Sequelize.STRING,
@@ -44,7 +43,6 @@ module.exports = {
     id_produto:{
       type: Sequelize.INTEGER,
       allowNull: false,
-      unique: true,
       references: {
         model: "produtos",
         key: "id_produto",

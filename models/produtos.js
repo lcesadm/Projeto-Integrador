@@ -33,8 +33,12 @@ module.exports = (sequelize, DataTypes) =>{
     type: DataTypes.INTEGER,
     allowNull: false
   },
-  createdAt: DataTypes.DATE,
-  updatedAt: DataTypes.DATE,
+  vendidos:{
+    type: DataTypes.INTEGER,
+    allowNull: false
+  },
+  createdAt: DataTypes.STRING,
+  updatedAt: DataTypes.STRING,
   });
 
   produtos.associate = (models) => {

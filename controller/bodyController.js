@@ -5,9 +5,10 @@ const crypto = require("crypto");
 
 
 const { produtos } = require("../models");
-
 const {carrinhos} = require("../models");
 const {enderecos} = require("../models");
+const {Pedido} = require("../models");
+
 
 
 
@@ -34,12 +35,7 @@ const bodyController = {
     
     
     
-    finalizar: (req, res) => {
-
-      let idFinalizer = crypto.randomBytes(4).toString('HEX')
-
-        return res.render("finalizar", {usuario: req.session.usuario, quantItens: req.session.count, idFinalizer});
-    },
+    
     carrinho: async (req, res) => {
     
 
@@ -72,16 +68,15 @@ const bodyController = {
         }
       );
 
-      let soma = 2
-
-      enderecoDb.forEach(element => {
-        soma = element.numero + soma;
-      });
-     
-      console.log(soma);
+      const pedidosDb = await Pedido.findAll(
+        {
+          where:{
+            id_usuario: id
+          }
+        });
 
       
-      return res.render("cliente", {usuario: req.session.usuario, quantItens: req.session.count, enderecoDb: enderecoDb});
+      return res.render("cliente", {usuario: req.session.usuario, quantItens: req.session.count, enderecoDb: enderecoDb, pedidos: pedidosDb});
   },
     
 

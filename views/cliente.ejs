@@ -3,25 +3,26 @@
 
     <main class="container cliente">
         <h1>Minha conta</h1>
+
+        <% if(!pedidos.length < 1) {%>
+
+          <% pedidos.forEach(element => {%> 
+
+
         <h2>Pedidos</h2>
         <div class="row">
             <h3>Nº Pedido</h3>
-            <mark>0000001</mark>
-            <h3>Data do pedido:</h3>
-            <p>06/04/2020</p>
+            <mark><%= element.id %></mark>
+            <h3>Valor total:</h3>
+            <p>R$ <%= element.valor_total_produto %>,00</p>
             <h3>Status:</h3>
-            <p>Processando pagamento</p>
+            <p>Analisando</p>
         </div>
         <hr>
-        <div class="row">
-            <h3>Nº Pedido</h3>
-            <mark>0000001</mark>
-            <h3>Data do pedido:</h3>
-            <p>06/04/2020</p>
-            <h3>Status:</h3>
-            <p>Processando pagamento</p>
-        </div>
-        <hr class="hr">
+        
+        <% }); %>
+
+        <% } %>
         <h2>Endereço</h2>
         <form action="/clienteE" method="POST">
             <div class="row">
@@ -69,34 +70,34 @@
 
               <div class="col-5">
                 <label for="cep">Cep:</label>
-                <input type="text" class="form-control" id="cep" name="cep" maxlength="8" placeholder="<%= element.cep %>" onblur="pesquisacep(this.value);" >
+                <input type="text" class="form-control" id="cep" name="cep" maxlength="8" value="<%= element.cep %>" placeholder="<%= element.cep %>" onblur="pesquisacep(this.value);" >
               </div>
 
               <div class="col-5">
                 <label for="Rua">Rua:</label>
-                <input type="text" class="form-control rua" id="rua" placeholder="<%= element.logradouro %>" name="logradouro"readonly>
+                <input type="text" class="form-control rua" id="rua" value="<%= element.logradouro %>" placeholder="<%= element.logradouro %>" name="logradouro"readonly>
               </div>
 
                 <div class="col-5 estado">
                     <label for="estado">Estado</label>
-                    <input type="text" class="form-control" id="uf" placeholder="<%= element.uf %>" name="uf" readonly>
+                    <input type="text" class="form-control" id="uf" placeholder="<%= element.uf %>" value="<%= element.uf %>" name="uf" readonly>
                 </div>
 
                 <div class="col-5">
                     <label for="cidade">Cidade:</label>
-                    <input type="text" class="form-control cidade" id="cidade" placeholder="<%= element.cidade %>" name="cidade" readonly>
+                    <input type="text" class="form-control cidade" id="cidade" value="<%= element.cidade %>" placeholder="<%= element.cidade %>" name="cidade" readonly>
                 </div>
                 <div class="col-5">
                   <label for="cidade">Bairro:</label>
-                  <input type="text" class="form-control" id="bairro" placeholder="<%= element.bairro %>" name="bairro" readonly>
+                  <input type="text" class="form-control" id="bairro" placeholder="<%= element.bairro %>" value="<%= element.bairro %>" name="bairro" readonly>
               </div>
                 <div class="col-5">
                   <label for="cidade">Numero:</label>
-                  <input type="text" class="form-control" id="numero" placeholder="<%= element.numero %>" name="numero">
+                  <input type="text" class="form-control" id="numero" placeholder="<%= element.numero %>" value="<%= element.numero %>" name="numero">
               </div>
               <div class="col-5">
                 <label for="Complemento">Complemento:</label>
-                <input type="text" class="form-control" id="complemento" placeholder="<%= element.complemento %>" name="complemento">
+                <input type="text" class="form-control" id="complemento" placeholder="<%= element.complemento %>" value="<%= element.complemento %>" name="complemento">
               </div>
               <% }); %>
 

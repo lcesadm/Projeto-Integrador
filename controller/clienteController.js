@@ -5,6 +5,8 @@ const { usuarios } = require("../models");
 
 
 
+
+
 const clienteController = {
     updateE: async (req, res) => {
         const {cep, logradouro, uf, cidade, bairro, numero, complemento} = req.body;
@@ -34,6 +36,31 @@ const clienteController = {
                 updatedAt: new Date(),
             });
 
+            let enderecoId = "";
+
+            let enderecoIddB = await enderecos.findAll(
+              {
+                where: {
+                  id_usuario: id
+              },
+                type: Sequelize.QueryTypes.SELECT,
+              }
+            );
+            
+            enderecoIddB.forEach(element => {
+              enderecoId = element.id_endereco;
+            });
+            
+            console.log('estou aqui' + enderecoId)
+
+            await usuarios.update({
+              id_endereco: enderecoId,
+              updateAt: new Date(),
+            },{
+              where:{
+                id_usuario:id,
+              }});
+            
 
           }else{
 
@@ -91,6 +118,7 @@ const clienteController = {
                 nascimento,
                 sexo,
                 ofertas,
+                updateAt:new Date(),
           },{
               where:{
                   id_usuario:id

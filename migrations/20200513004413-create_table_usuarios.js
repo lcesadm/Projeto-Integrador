@@ -34,8 +34,8 @@ module.exports = {
         allowNull: false,
 
       },
-      endereco:{
-        type: Sequelize.STRING,
+      id_endereco:{
+        type: Sequelize.INTEGER,
       },
       nascimento:{
         type: Sequelize.DATE,

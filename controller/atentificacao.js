@@ -37,7 +37,7 @@ const autentificacao = {
           nome: usuario.nome,
           email: usuario.email,
           CPF: usuario.CPF,
-          endereco: usuario.endereco,
+          id_endereco: usuario.id_endereco,
           nascimento: usuario.nascimento,
           sexo: usuario.sexo,
         };

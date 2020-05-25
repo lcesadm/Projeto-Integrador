@@ -24,8 +24,8 @@ module.exports = (sequelize, DataTypes) => {
           type: DataTypes.STRING,
           allowNull: false,
         },
-        endereco:{
-          type: DataTypes.STRING,
+        id_endereco:{
+          type: DataTypes.INTEGER,
         },
         nascimento:{
           type: DataTypes.DATE,
@@ -54,9 +54,12 @@ module.exports = (sequelize, DataTypes) => {
         usuarios.associate = (models) => {
           usuarios.hasMany(models.Pedido, {foreignKey:"id_usuario", as: "pedidos"})
         };
+        
         usuarios.associate = (models) => {
-          usuarios.hasMany(models.enderecos, {foreignKey:"id_usuario", as: "pedidos"})
+          usuarios.hasMany(models.enderecos, {foreignKey:"id_usuario", as: "enderecos"})
         };
+        
+        
         
         return usuarios;
 

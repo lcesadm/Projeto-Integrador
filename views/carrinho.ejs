@@ -24,11 +24,11 @@
                         
                 </div>
                 <div class="valores">
-                    <p>Valor Unitario: <b>R$ <%= element.valor_produto %></b></p>
+                    <p>Valor Unitario: <b>R$ <%= element.valor_produto %>,00</b></p>
                     <hr>
                     <p>Desconto: <b>0%</b></p>
                     <hr>
-                    <p>Valor Total: <b>R$ 25,99</b></p>
+                    <p>Valor Total: <b>R$ <%= element.valor_total_produto %>,00</b></p>
                 </div>
                 <form action="/carrinho" method="post">
                     <input type="text" value="<%= element.id_produto %>" style="display: none;" readonly name="id_produto">

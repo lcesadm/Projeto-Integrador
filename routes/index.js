@@ -38,7 +38,7 @@ router.post('/ecomerce',autenController.validando ,carrinhoController.store);
 router.get('/ecomerce/:id', produtosController.ecomerceId);
 router.post('/ecomerce/:id',autenController.validando ,carrinhoController.store);
 
-router.get('/finalizar', autenController.validando, bodyController.finalizar);
+router.get('/finalizar', autenController.validando, pedidoController.finalizar);
 router.post('/finalizar', autenController.validando, pedidoController.storePedido);
 
 

@@ -45,13 +45,14 @@ module.exports = (sequelize, DataTypes) =>{
               key: "id_usuario",
               }
           },
-          createdAt: DataTypes.DATE,
-          updatedAt: DataTypes.DATE,     
+          createdAt: DataTypes.STRING,
+          updatedAt: DataTypes.STRING,     
           });
 
   enderecos.associate = (models) => {
     enderecos.belongsTo(models.usuarios, {foreignKey:"id_usuario", as: 'usuarios'});
   };
+ 
   
   return enderecos;
 

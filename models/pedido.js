@@ -12,6 +12,10 @@ module.exports = (sequelize, DataTypes) => {
            allowNull: false,
           
          },
+         id_endereco:{
+          type: DataTypes.INTEGER,
+          allowNull: false,
+        },
          id_produto:{
            type: DataTypes.INTEGER,
            allowNull: false,
@@ -36,12 +40,16 @@ module.exports = (sequelize, DataTypes) => {
            type: DataTypes.DECIMAL,
            allowNull: false,
          },
-         createdAt: DataTypes.DATE,
-         updatedAt: DataTypes.DATE,
+         createdAt: DataTypes.STRING,
+         updatedAt: DataTypes.STRING,
           });
           Pedido.associate = (models) => {
             Pedido.belongsTo(models.usuarios, {foreignKey:"id_usuario", as: 'usuarios'});
           };
+          Pedido.associate = (models) => {
+            Pedido.belongsTo(models.usuarios, {foreignKey:"id_endereco", as: 'usuarios'});
+          };
+          
           
         return Pedido;
 

@@ -33,10 +33,9 @@ module.exports = (sequelize, DataTypes) => {
               id_produto:{
                 type: DataTypes.INTEGER,
                 allowNull: false,
-                unique: true,
               },
-              createdAt: DataTypes.DATE,
-              updatedAt: DataTypes.DATE,
+              createdAt: DataTypes.STRING,
+              updatedAt: DataTypes.STRING,
         });
         carrinhos.associate = (models) => {
         carrinhos.belongsTo(models.usuarios, {foreignKey:"id_usuario", as: 'usuarios'});

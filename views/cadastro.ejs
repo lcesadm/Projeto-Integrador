@@ -4,6 +4,15 @@
             <div class="cadastro">
             <form method="post" action="/registro">
               <h2>Cadastre-se</h2>
+
+                <% if( typeof msg !== 'undefined') {%>
+                  <div class="alert alert-info" role="alert">
+
+                <%= msg %>
+              </div>
+
+                <% } %>
+
               <h4>preecha o formulario abaixo</h4>
               <div class="row">
                 <div class="left">
