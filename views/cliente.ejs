@@ -23,7 +23,7 @@
         </div>
         <hr class="hr">
         <h2>Endereço</h2>
-        <form action="/cliente" method="POST">
+        <form action="/clienteE" method="POST">
             <div class="row">
 
               <% if(enderecoDb.length < 1) {%>
@@ -139,61 +139,61 @@
             <hr class="hr">
 
             <h2>meu cadastro</h2>
-            <form>
+            <form action="/clienteC" method="POST">
             <div class="form-row">
                   <div class="col-5">
                     <label for="inputEmail4">Email:</label>
-                    <input type="email" class="form-control email" id="inputEmail4" placeholder="Email" value="<%= usuario.email %>">
+                    <input name="email" type="email" class="form-control email" id="inputEmail4" placeholder="Email" value="<%= usuario.email %>" readonly>
                   </div>
                   <div class="col-5">
                     <label for="inputPassword4">Senha:</label>
-                    <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
+                    <input type="password" class="form-control" id="inputPassword4" placeholder="Senha" readonly name="password">
                   </div>
                       <div class="col-5">
                         <label for="inputEmail4">CPF:</label>
-                        <input type="text" class="form-control CPF" id="inputEmail4" placeholder="CPF" value="<%= usuario.CPF %>">
+                        <input type="text" class="form-control CPF" id="inputEmail4" placeholder="CPF" value="<%= usuario.CPF %>" name="CPF">
                       </div>
                       <div class="col-5">
                         <label for="inputPassword4">Nome completo:</label>
-                        <input type="text" class="form-control" id="inputPassword4" placeholder="Nome completo" value="<%= usuario.nome %>">
+                        <input type="text" class="form-control" id="inputPassword4" placeholder="Nome completo" value="<%= usuario.nome %>" name="nome">
                       </div>
                       <div class="col-5 nasc">
                         <label for="inputPassword4">Data de nascimento:</label>
-                        <input type="date" class="form-control" id="inputPassword4" placeholder="DD/MM/AAAA" value="<%= usuario.nascimento %>">
+                        <input type="date" class="form-control" id="inputPassword4" placeholder="DD/MM/AAAA" value="<%= usuario.nascimento %>" name="nascimento">
                       </div>
                       <div class="sexo">
                           <div class="col">
                               <label for="sexo">Qual seu sexo:</label>
                               <br>
-                                <% if(usuario.sexo == 'masculino'){ %>
-                                  <input type="checkbox" name="sexo" value="masculino" class="form-check-input"  checked><label class="form-check-label">Masculino</label>
+                                <% if(usuario.sexo = 1){ %>
+                                  <input type="checkbox" name="sexo" value="1" class="form-check-input"  checked><label class="form-check-label">Masculino</label>
                                 <% }else { %>
-                                  <input type="checkbox" name="sexo" value="masculino" class="form-check-input"><label class="form-check-label">Masculino</label>
+                                  <input type="checkbox" name="sexo" value="0" class="form-check-input"><label class="form-check-label">Feminino</label>
                                 <% } %>
                               <br>
-                                <% if(usuario.sexo == 'feminino'){ %>
-                                  <input type="checkbox" name="sexo" value="feminino" class="form-check-input"  checked><label class="form-check-label">Feminino</label>
+                                <% if(usuario.sexo == 0){ %>
+                                  <input type="checkbox" name="sexo" value="1" class="form-check-input"  checked><label class="form-check-label">Masculino</label>
                                 <% }else { %>
-                                  <input type="checkbox" name="sexo" value="feminino" class="form-check-input"><label class="form-check-label">Feminino</label>
+                                  <input type="checkbox" name="sexo" value="0" class="form-check-input"><label class="form-check-label">Feminino</label>
                                 <% } %>
                           </div>
                       </div>
                       <div class="col sexo">
                           <h5>Gostaria de assinar nosso newlestter?</h5>
-                        <input type="checkbox" class="form-check-input" id="newlester">
+                        <input type="checkbox" class="form-check-input" id="newlester" name="ofertas" value="1">
                         <label class="form-check-label" for="newlester">Sim</label>
                       </div>
                 </div>
                 
                 <div class="col sexo">
-                  <label class="form-check-label" for="newlester">Se for comerciante ou professor e queira utilizar nossa plataforma do e-commerce diga sim, e iremos enviar um email  solicitando suas comprovações que irão para analise:</label>
+                  <label class="form-check-label" for="vendas">Se for comerciante ou professor e queira utilizar nossa plataforma do e-commerce diga sim, e iremos enviar um email  solicitando suas comprovações que irão para analise:</label>
                   <br>
-                  <input type="checkbox" class="form-check-input" id="newlester">
-                        <label class="form-check-label" for="newlester">Sim</label>
+                  <input type="checkbox" class="form-check-input" id="vendas" value="1" name="vendedor">
+                        <label class="form-check-label" for="vendas">Sim</label>
                 </div>                 
-                
+                <button type="submit" class="atualizar">Atualizar cadastro</button>
+
               </form>
-              <button type="submit" class="atualizar">Atualizar cadastro</button>
     
     </main>
     <%- include('./partials/footer') %>

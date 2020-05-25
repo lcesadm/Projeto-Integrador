@@ -26,7 +26,10 @@ router.post('/carrinho', autenController.validando ,carrinhoController.remove);
 
 
 router.get('/cliente', autenController.validando, bodyController.cliente);
-router.post('/cliente', autenController.validando, clienteController.update);
+router.post('/clienteE', autenController.validando, clienteController.updateE);
+router.post('/clienteC', autenController.validando, clienteController.updateC);
+
+
 
 
 router.get('/ecomerce', produtosController.ecomerce);
@@ -51,6 +54,8 @@ router.get('/noticia', bodyController.noticia);
 
 router.get('/paginaAdmin', autenController.validando, bodyController.paginaAdmin);
 router.post('/paginaAdmin', upload.any() ,produtosController.storeProduto);
+router.post('/paginaAdminR',produtosController.remove);
+
 
 
 

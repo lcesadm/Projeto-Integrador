@@ -13,7 +13,6 @@ const registerController = {
                 password: hashPassword,
                 CPF, 
                 nome,
-                endereco,
                 nascimento,
                 sexo,
                 ofertas,

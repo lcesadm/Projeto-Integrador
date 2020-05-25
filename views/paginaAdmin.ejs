@@ -120,12 +120,18 @@
             <h2>Itens vendidos</h2>
             <ul>
                 <% produtos.forEach(element => {%> 
+                    <form action="/paginaAdminR" method="post">
+
                     <li>
                         <div>
-                            Nome do produto: <strong><%= element.nome_produto %></strong> | Codígo do produto: <strong><%= element.id_produto %></strong>| Quantidade vendida: <strong>5</strong> | Total a receber: <strong>R$ <%= element.valor %>,00</strong>
+                            Nome do produto: <strong><%= element.nome_produto %></strong> | Codígo do produto: <strong><%= element.id_produto %></strong>| Quantidade vendida: <strong>5</strong> | Total a receber: <strong>R$ <%= element.valor %>,00 
+                                    <input type="text" value="<%= element.id_produto %>" style="display: none;" readonly name="id_produto">
+                                    <button class="remove_carrinho" type="submit" >Remover produto</button>
                         </div>
                         <hr>
                     </li>
+                </form>
+
                 <% }); %>
                 
             </ul>

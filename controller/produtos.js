@@ -44,6 +44,22 @@ const produtosController = {
       
           return res.render("ecomerce", {usuario: req.session.usuario, produtosDb, quantItens: req.session.count});
       },
+      remove: async (req, res) => {
+  
+        const id = req.session.usuario.id;
+        const {id_produto} = req.body;
+
+
+        await produtos.destroy(
+          {
+            where: {
+                id_produto,
+                id_usuario: id,
+            }
+        });
+      
+          return res.redirect("paginaAdmin");
+      },
       infoProdutos: async (req, res) => {
         const id = req.params.id;
         const infoProduto = await produtos.findAll(

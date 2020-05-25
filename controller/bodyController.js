@@ -25,6 +25,7 @@ const bodyController = {
         return res.render("index", {usuario: req.session.usuario, produtos: produtosDb, quantItens: req.session.count});
     },
     noticia: (req, res) => {
+
         return res.render("noticia", {usuario: req.session.usuario, quantItens: req.session.count});
     },
     cadastro: (_req, res) => {
@@ -103,18 +104,16 @@ const bodyController = {
           }
         })
 
-      const produtos = await con.query(
-        "select * from produtos where id_usuario=:usuario_id;",
-        {
-          replacements: {
-            usuario_id: id
-        },
-          type: Sequelize.QueryTypes.SELECT,
-        }
-      );
+       let produtosDb =  await produtos.findAll(
+          {
+            where: {
+              id_usuario: id
+            }
+          }
+        );
         
 
-        return res.render("paginaAdmin", {usuario: req.session.usuario, produtos: produtos, quantItens});
+        return res.render("paginaAdmin", {usuario: req.session.usuario, produtos: produtosDb, quantItens});
     }
 };
 
