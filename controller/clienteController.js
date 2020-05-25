@@ -1,5 +1,5 @@
 const Sequelize = require("sequelize");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const { enderecos } = require("../models");
 const { usuarios } = require("../models");
 

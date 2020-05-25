@@ -28,10 +28,6 @@ module.exports = (sequelize, DataTypes) =>{
   id_usuario:{
     type: DataTypes.INTEGER,
     allowNull: false,
-    // references: {
-    //   model: "usuarios",
-    //   key: "id_usuario"
-    //   },
   },
   categoria:{
     type: DataTypes.INTEGER,

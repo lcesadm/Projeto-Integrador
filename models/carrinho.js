@@ -29,19 +29,11 @@ module.exports = (sequelize, DataTypes) => {
               id_usuario:{
                 type: DataTypes.INTEGER,
                 allowNull: false,
-                // references: {
-                //   model: "usuarios",
-                //   key: "id_usuario"
-                //   },
               },
               id_produto:{
                 type: DataTypes.INTEGER,
                 allowNull: false,
                 unique: true,
-                // references: {
-                //   model: "usuarios",
-                //   key: "id_usuario"
-                //   },
               },
               createdAt: DataTypes.DATE,
               updatedAt: DataTypes.DATE,
