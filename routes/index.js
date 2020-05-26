@@ -48,6 +48,9 @@ router.get('/infoProdutos/:id', produtosController.infoProdutos);
 router.get('/login', bodyController.login);
 router.post('/login', autenController.validatorLogin);
 
+router.get('/logout', bodyController.logout);
+
+
 
 router.get('/mapa', bodyController.mapa);
 router.get('/noticia', bodyController.noticia);

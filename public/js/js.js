@@ -9,3 +9,4 @@ function destroyer(id_carinho){
         where: {id_carrinho: id_carinho}
     })
 }
+

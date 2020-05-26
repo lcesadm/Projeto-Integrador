@@ -115,6 +115,20 @@ footer p{
     margin-top: auto;
     margin-bottom: 10px;
 }
+.carri-log{
+    width: 35px;
+    margin-bottom: 20px;
+}
+
+.log{
+    padding:8px;
+    transition: all 0.3s;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+.log:hover{
+    background-color: #dddddf;
+}
 
 .foot p{
     margin-left: 40%;
@@ -1268,6 +1282,17 @@ h5{
 
 /* pagina admin */
 
+.pai-produtos{
+    background-color:rgb(123,187,208,60%);
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 7px 7px 2px 1px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #F6FAFC;
+    padding-bottom: 20px;
+}
+
 .vendidos h2{
     width: 100%;
     padding-top: 20px;
@@ -1302,6 +1327,7 @@ h5{
 }
 .add-item form .form-group textarea{
     width: 300px;
+
     max-height: 400px;
 }
 .add-item form button{

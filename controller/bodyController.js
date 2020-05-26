@@ -76,9 +76,15 @@ const bodyController = {
         });
 
       
+      
       return res.render("cliente", {usuario: req.session.usuario, quantItens: req.session.count, enderecoDb: enderecoDb, pedidos: pedidosDb});
   },
-    
+
+  logout: (req, res) => {
+    req.session.destroy();
+    res.render('login')
+      
+},
 
     login: (_req, res) => {
         return res.render("login");
