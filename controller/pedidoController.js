@@ -5,9 +5,8 @@ const { produtos } = require("../models");
 const crypto = require("crypto");
 
 
-let id = crypto.randomBytes(9).toString('HEX');
+let idFinalizer = crypto.randomBytes(9).toString('HEX');
 
-let idFinalizer = Math.random();
 
 
 
@@ -93,7 +92,7 @@ const pedidoController = {
                     })
 
                   await Pedido.create({
-                    id: 477,
+                    id: idPedido,
                     id_usuario: id,
                     id_produto: id_produtoDb,
                     nome_produto: nome_produtoDb,
