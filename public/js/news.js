@@ -8,7 +8,7 @@ function getNoticias() {
 
 
 
-    fetch("http://newsapi.org/v2/everything?q=bitcoin&from=2020-04-25&sortBy=publishedAt&apiKey=fd67ec332bed40ecab3e342590423cc7")
+    fetch("https://newsapi.org/v2/top-headlines?country=br&category=science&apiKey=fd67ec332bed40ecab3e342590423cc7")
     .then(function (resultado){
         return resultado.json()
     })
@@ -23,7 +23,7 @@ function getNoticias() {
         resultadoNews.articles.forEach(noticia => {
             cardNews.innerHTML += `
             <div class="container news">
-            <div class="row"><a href="${noticia.url}">
+            <a href="${noticia.url}">
                 <img src="${noticia.urlToImage}" alt="Notícias enem">
                 <div>
                     <h2>
@@ -34,7 +34,6 @@ function getNoticias() {
                     </h4>
                 </a>
                 </div>
-            </div>
         </div>
         `
 

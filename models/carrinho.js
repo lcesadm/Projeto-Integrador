@@ -34,8 +34,8 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.INTEGER,
                 allowNull: false,
               },
-              createdAt: DataTypes.STRING,
-              updatedAt: DataTypes.STRING,
+              createdAt: DataTypes.DATE,
+              updatedAt: DataTypes.DATE,
         });
         carrinhos.associate = (models) => {
         carrinhos.belongsTo(models.usuarios, {foreignKey:"id_usuario", as: 'usuarios'});

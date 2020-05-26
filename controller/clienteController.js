@@ -51,7 +51,6 @@ const clienteController = {
               enderecoId = element.id_endereco;
             });
             
-            console.log('estou aqui' + enderecoId)
 
             await usuarios.update({
               id_endereco: enderecoId,

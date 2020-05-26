@@ -45,8 +45,8 @@ module.exports = (sequelize, DataTypes) =>{
               key: "id_usuario",
               }
           },
-          createdAt: DataTypes.STRING,
-          updatedAt: DataTypes.STRING,     
+          createdAt: DataTypes.DATE,
+          updatedAt: DataTypes.DATE,     
           });
 
   enderecos.associate = (models) => {

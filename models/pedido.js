@@ -40,8 +40,8 @@ module.exports = (sequelize, DataTypes) => {
            type: DataTypes.DECIMAL,
            allowNull: false,
          },
-         createdAt: DataTypes.STRING,
-         updatedAt: DataTypes.STRING,
+         createdAt: DataTypes.DATE,
+         updatedAt: DataTypes.DATE,
           });
           Pedido.associate = (models) => {
             Pedido.belongsTo(models.usuarios, {foreignKey:"id_usuario", as: 'usuarios'});

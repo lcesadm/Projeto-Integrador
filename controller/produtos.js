@@ -31,7 +31,7 @@ const produtosController = {
   
         const produtosDb = await produtos.findAll();
       
-          return res.render("ecomerce", {usuario: req.session.usuario, produtosDb, quantItens: req.session.count});
+          return res.render("ecomerce", {usuario: req.session.usuario, produtosDb, quantItens: req.session.count, title: 'E-comerce'});
       },
       ecomerceId: async (req, res) => {
   
@@ -45,7 +45,7 @@ const produtosController = {
           }
         );
       
-          return res.render("ecomerce", {usuario: req.session.usuario, produtosDb, quantItens: req.session.count});
+          return res.render("ecomerce", {usuario: req.session.usuario, produtosDb, quantItens: req.session.count, title: 'E-comerce'});
       },
       remove: async (req, res) => {
   
@@ -72,7 +72,7 @@ const produtosController = {
             }
           });
          
-          return res.render("infoProdutos", {usuario: req.session.usuario, infoProduto: infoProduto, quantItens: req.session.count});
+          return res.render("infoProdutos", {usuario: req.session.usuario, infoProduto: infoProduto, quantItens: req.session.count, title: 'Pagina Produto'});
       },
 }
 

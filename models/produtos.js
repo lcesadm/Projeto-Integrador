@@ -37,8 +37,8 @@ module.exports = (sequelize, DataTypes) =>{
     type: DataTypes.INTEGER,
     allowNull: false
   },
-  createdAt: DataTypes.STRING,
-  updatedAt: DataTypes.STRING,
+  createdAt: DataTypes.DATE,
+  updatedAt: DataTypes.DATE,
   });
 
   produtos.associate = (models) => {

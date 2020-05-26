@@ -5,16 +5,16 @@ const { produtos } = require("../models");
 const crypto = require("crypto");
 
 
+let id = crypto.randomBytes(9).toString('HEX');
 
-
-const idFinalizer = crypto.randomBytes(4).toString('HEX')
+let idFinalizer = Math.random();
 
 
 
 const pedidoController = {
   finalizar: (req, res) => {
       idFinalizer+2;
-      return res.render("finalizar", {usuario: req.session.usuario, quantItens: req.session.count, idFinalizer});
+      return res.render("finalizar", {usuario: req.session.usuario, quantItens: req.session.count, idFinalizer, title:'Finalizar pedido'});
   },
     storePedido: async(req,res)=>{
         const id = req.session.usuario.id;
@@ -42,7 +42,6 @@ const pedidoController = {
                     }
                   );
 
-                  console.log(carrinhosDb);
                     let id_produtoDb = "";
                     let nome_produtoDb = "";
                     let quantidade_produtoDb = "";
@@ -52,13 +51,49 @@ const pedidoController = {
                     carrinhosDb.forEach(element => {
                         id_produtoDb = element.id_produto;
                         nome_produtoDb = element.nome_produto;
-                        valor_produtoDb = element.valor_produto;
-                        valor_total_produtoDb = element.valor_total_produto;
-                        quantidade_produtoDb = element.quantidade_produto
+                        valor_produtoDb += element.valor_produto;
+                        valor_total_produtoDb += element.valor_total_produto;
+                        quantidade_produtoDb += element.quantidade_produto
                     });
 
+                    console.log('itens carrinho' + quantidade_produtoDb)
+
+                    let vendidosDb = await produtos.findAll(
+                      {
+                        where: {
+                          id_produto: id_produtoDb
+                      },
+                        type: Sequelize.QueryTypes.SELECT,
+                      }
+                    );
+  
+                    let vendidosUp = "";
+
+                    let convertQuant = parseInt(quantidade_produtoDb);
+
+                    console.log('item convertido' + convertQuant);
+
+  
+                    vendidosDb.forEach(element => {
+                      
+
+                      vendidosUp = element.vendidos += convertQuant;
+                    });
+
+                    console.log('estou aqui'+vendidosUp)
+                      
+  
+                    await produtos.update({
+                      vendidos: vendidosUp,
+                      updatedAt: new Date(),
+                    },{
+                      where:{
+                        id_produto: id_produtoDb,
+                      }
+                    })
+
                   await Pedido.create({
-                    id: idPedido,
+                    id: 477,
                     id_usuario: id,
                     id_produto: id_produtoDb,
                     nome_produto: nome_produtoDb,
@@ -70,32 +105,8 @@ const pedidoController = {
                     updatedAt: new Date(),
                   });
 
-                  console.log("a data esta aqui" + data);
 
-                  let vendidosDb = await produtos.findAll(
-                    {
-                      where: {
-                        id_produto: id_produtoDb
-                    },
-                      type: Sequelize.QueryTypes.SELECT,
-                    }
-                  );
-
-                  let vendidosUp = "";
-
-                  vendidosDb.forEach(element => {
-                    vendidosUp = element.vendidos + quantidade_produtoDb;
-                  });
-                    
-
-                  await produtos.update({
-                    vendidos: vendidosUp,
-                    updatedAt: new Date(),
-                  },{
-                    where:{
-                      id_produto: id_produtoDb,
-                    }
-                  })
+                  
 
                   await carrinhos.destroy({
                     where:{

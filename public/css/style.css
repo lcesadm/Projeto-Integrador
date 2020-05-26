@@ -138,11 +138,11 @@ footer p{
 /* pagina noticias */
 
 .news{
-    height: 25vh;
     background-color:rgb(123,187,208,60%);
     border-radius: 5px;
     margin-bottom: 50px;
     box-shadow: 7px 7px 2px 1px rgba(0, 0, 0, 0.2);
+    display: flex;
 }
 
 .news img{
@@ -153,21 +153,24 @@ footer p{
     margin-top: 30px;
     min-width: 100px;
     min-height: 100px;
+    
 
 }
 .news h2{
     width: 50vw;
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 35px;
     color: #F6FAFC;
-    letter-spacing: 2px;
     margin-bottom: 30px;
     font-weight: bold;
 }
 .news h4{
     font-size: 15px;
     color: #F6FAFC;
-    font-weight: bold;
+    font-weight: normal;
+    text-align: justify;
+    text-transform: none;
+    padding-bottom: 15px;
 }
 
 .new{
@@ -964,7 +967,7 @@ article .right{
     margin-left: 20px;
 }
 .cliente mark{
-    width: 134px;
+    width: 194px;
     height: 30px;
     border: none;
     border-radius: 5px;
@@ -1281,7 +1284,15 @@ h5{
 
 
 /* pagina admin */
-
+.remove_carrinho{
+    width: 150px;
+    border: none;
+    border-radius: 5px;
+    background-color: #dbd5b6;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 40px;
+}
 .pai-produtos{
     background-color:rgb(123,187,208,60%);
     width: 100%;
