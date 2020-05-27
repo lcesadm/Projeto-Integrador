@@ -20,24 +20,28 @@ const carrinhoController = {
 
     let countIten = 1;
 
-    let valorTotalDb
+    let valorTotalDb = 0;
 
 
     findProdu.forEach(element => {
-        console.log('estou aqui' + element.id_produto);
-
-        countIten += element.quantidade_produto;
-        valorTotalDb =+ element.valor_total_produto;
+        let countCarr = element.quantidade_produto;
+        countIten = 1 + countCarr;
+        console.log(countCarr + ' quantidade de itens');
+        
+        valorTotalDb = countIten * element.valor_produto;
 
     });
 
-    let convertValor = parseInt(valorTotalDb);
+    let varTotal = await carrinhos.findAll(
+        {
+          where:{
+            id_usuario: id
+          }
+        }
+      )
+      
 
-    console.log(convertValor);
-
-    let passarValor = convertValor*countIten;
-
-    console.log(passarValor);
+  
 
 
     if(findProdu < 1){
@@ -57,7 +61,7 @@ const carrinhoController = {
     }else{
         await carrinhos.update({
             quantidade_produto: countIten,
-            valor_total_produto: passarValor,
+            valor_total_produto: valorTotalDb,
             updateAt: new Date,
         },{
             where:{

@@ -52,7 +52,22 @@ const bodyController = {
         }
       );
 
-      return res.render("carrinho", {usuario: req.session.usuario, carrinho: carrinhosDb, quantItens: req.session.count, title: 'Carrinho'});
+      let varTotal = await carrinhos.findAll(
+        {
+          where:{
+            id_usuario: id
+          }
+        }
+      )
+      let soma = 0;
+      varTotal.forEach(element => {
+        soma += parseInt(element.valor_total_produto);
+        
+      });
+
+      console.log(soma);
+
+      return res.render("carrinho", {usuario: req.session.usuario, carrinho: carrinhosDb, quantItens: req.session.count, title: 'Carrinho', soma});
 
   },
     cliente: async (req, res) => {
@@ -73,6 +88,14 @@ const bodyController = {
           where:{
             id_usuario: id
           }
+        });
+        let convertTotalPedido = ";"
+        pedidosDb.forEach(element => {
+          convertTotalPedido =  element.valor_total_produto.replace(/\//g,'+');
+          convertTotalPedido = convertTotalPedido.slice(0, -1);
+          convertTotalPedido = convertTotalPedido.slice(0, -1);
+          convertTotalPedido = eval(convertTotalPedido);
+          console.log(convertTotalPedido);
         });
 
       

@@ -27,20 +27,23 @@ module.exports = {
       type: Sequelize.INTEGER,
     },
     id_produto:{
-      type: Sequelize.INTEGER,
+      type: Sequelize.STRING,
       allowNull: false,
     },
     nome_produto:{
       type: Sequelize.STRING,
     },
     quantidade_produto:{
-      type: Sequelize.INTEGER,
+      type: Sequelize.STRING,
     },
     valor_produto:{
-      type: Sequelize.DECIMAL,
+      type: Sequelize.STRING,
     },
     valor_total_produto:{
-      type: Sequelize.DECIMAL,
+      type: Sequelize.STRING,
+    },
+    valor_total_pedido:{
+      type: Sequelize.STRING,
     },
     createdAt: Sequelize.DATE,
     updatedAt: Sequelize.DATE,

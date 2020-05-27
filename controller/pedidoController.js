@@ -11,9 +11,27 @@ let idFinalizer = crypto.randomBytes(9).toString('HEX');
 
 
 const pedidoController = {
-  finalizar: (req, res) => {
+  finalizar: async (req, res) => {
+
+    const id = req.session.usuario.id;
+
+
+    let varTotal = await carrinhos.findAll(
+      {
+        where:{
+          id_usuario: id
+        }
+      }
+    )
+    let soma = 0;
+    varTotal.forEach(element => {
+      soma += parseInt(element.valor_total_produto);
+      
+    });
+
+
       idFinalizer+2;
-      return res.render("finalizar", {usuario: req.session.usuario, quantItens: req.session.count, idFinalizer, title:'Finalizar pedido'});
+      return res.render("finalizar", {usuario: req.session.usuario, quantItens: req.session.count, idFinalizer, title:'Finalizar pedido', soma});
   },
     storePedido: async(req,res)=>{
         const id = req.session.usuario.id;
@@ -41,58 +59,33 @@ const pedidoController = {
                     }
                   );
 
+                  
+
                     let id_produtoDb = "";
                     let nome_produtoDb = "";
                     let quantidade_produtoDb = "";
                     let valor_produtoDb = "";
                     let valor_total_produtoDb = "";
 
+
+
                     carrinhosDb.forEach(element => {
-                        id_produtoDb = element.id_produto;
-                        nome_produtoDb = element.nome_produto;
-                        valor_produtoDb += element.valor_produto;
-                        valor_total_produtoDb += element.valor_total_produto;
-                        quantidade_produtoDb += element.quantidade_produto
+                        id_produtoDb += element.id_produto + " / ";
+                        nome_produtoDb += element.nome_produto+ " / ";
+                        valor_produtoDb += element.valor_produto+".00"+ " / ";
+                        valor_total_produtoDb += element.valor_total_produto+".00"+ " / ";
+                        quantidade_produtoDb += element.quantidade_produto+ " / ";
                     });
 
-                    console.log('itens carrinho' + quantidade_produtoDb)
+                    let convertTotalPedido = ";"
 
-                    let vendidosDb = await produtos.findAll(
-                      {
-                        where: {
-                          id_produto: id_produtoDb
-                      },
-                        type: Sequelize.QueryTypes.SELECT,
-                      }
-                    );
-  
-                    let vendidosUp = "";
-
-                    let convertQuant = parseInt(quantidade_produtoDb);
-
-                    console.log('item convertido' + convertQuant);
-
-  
-                    vendidosDb.forEach(element => {
-                      
-
-                      vendidosUp = element.vendidos += convertQuant;
-                    });
-
-                    console.log('estou aqui'+vendidosUp)
-                      
-  
-                    await produtos.update({
-                      vendidos: vendidosUp,
-                      updatedAt: new Date(),
-                    },{
-                      where:{
-                        id_produto: id_produtoDb,
-                      }
-                    })
+                    convertTotalPedido =  valor_total_produtoDb.replace(/\//g,'+');
+                    convertTotalPedido = convertTotalPedido.slice(0, -1);
+                    convertTotalPedido = convertTotalPedido.slice(0, -1);
+                    convertTotalPedido = eval(convertTotalPedido);
 
                   await Pedido.create({
-                    id: idPedido,
+                    id: 15,
                     id_usuario: id,
                     id_produto: id_produtoDb,
                     nome_produto: nome_produtoDb,
@@ -100,18 +93,50 @@ const pedidoController = {
                     valor_produto: valor_produtoDb,
                     valor_total_produto: valor_total_produtoDb,
                     id_endereco: idEndereco,
+                    valor_total_pedido: convertTotalPedido + 20,
                     createdAt: new Date(),
                     updatedAt: new Date(),
                   });
 
+                  // Atualizar produto
+
+                  console.log('cheguei aqui');
+
+                  let contador = 2;
 
                   
+
+                  carrinhosDb.forEach(async element => {
+
+                    let countProdutos = await produtos.count({
+                      vendidos,
+                    },{
+                      where:{
+                        id_produto: element.id_produto,
+                      }
+                    })
+                    
+
+                    await produtos.update({
+                      vendidos: contador,
+                      updateAt: new Date(),
+                    },{
+                      where:{
+                        id_produto:element.id_produto,
+                        id_usuario:id,
+                      }});
+                    
+                  });
+                  
+
+
+                  console.log('travei aqui');
+
 
                   await carrinhos.destroy({
                     where:{
                       id_usuario: id,
-                      id_produto: id_produtoDb
-                    }
+                    } 
                   })
                     // for (let i = 0; i < quantItens; i++) {
 

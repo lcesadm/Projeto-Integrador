@@ -47,17 +47,12 @@
             <!-- finaliza item-->
 
             <div class="row">
-                <form action="cep" method="post">
-                    <label for="cel">Digite seu CEP:</label>
-                    <input type="text" name="cep" maxlength="8" OnKeyPress="formatar('#####-###', this)"
-                        placeholder="Digite seu cep">
-                    <button type="submit">Calcular</button>
-                </form>
+                
                 <div class="p">
-                    <p>Valor do frete: <strong>R$10,99</strong></p>
+                    <p>Valor do frete fixo: <strong>R$20,00</strong></p>
                 </div>
                 <div class="total">
-                    <p>Valor total do pedido: <strong>R$62,97</strong></p>
+                    <p>Valor total do pedido: <strong>R$<%= soma + 20 %>,00</strong></p>
                 </div>
 
                 <form action="cupom" method="post">

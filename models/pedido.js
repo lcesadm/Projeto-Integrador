@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
           allowNull: false,
         },
          id_produto:{
-           type: DataTypes.INTEGER,
+           type: DataTypes.STRING,
            allowNull: false,
           
          },
@@ -27,19 +27,22 @@ module.exports = (sequelize, DataTypes) => {
           
          },
          quantidade_produto:{
-           type: DataTypes.INTEGER,
+           type: DataTypes.STRING,
            allowNull: false,
           
          },
          valor_produto:{
-           type: DataTypes.DECIMAL,
+           type: DataTypes.STRING,
            allowNull: false,
           
          },
          valor_total_produto:{
-           type: DataTypes.DECIMAL,
+           type: DataTypes.STRING,
            allowNull: false,
          },
+         valor_total_pedido:{
+          type: DataTypes.STRING,
+        },
          createdAt: DataTypes.DATE,
          updatedAt: DataTypes.DATE,
           });
