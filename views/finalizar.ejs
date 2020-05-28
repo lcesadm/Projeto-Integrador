@@ -15,45 +15,50 @@
                     </div>
                     <div class="row">
                         <button type="button" data-toggle="modal" data-target=".bd-example-modal-lg">Selecionar</button>
-                        <button type="button" data-target=".bd-example-modal-lg">Selecionar</button>
+                        <button type="button" data-target=".bd-example-modal-lg" >Selecionar</button>
                         <!-- Modal -->
                         <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-lg" role="document">
                               <div class="modal-content">
+                                <form action="/finalizar" method="post">
+
                                 <h2>Selecione seu cartão</h2>
                                 <div class="row">
                                     <div class="cartao">
                                         <div class="row">
-                                            <input type="checkbox" aria-label="Checkbox for following text input"><p>1234.****.****.****</p> <p>Val: 12/28</p> <p>CVC: 098</p></button>
+                                            <input type="radio" aria-label="Checkbox for following text input" name="cartao"><p>1234.****.****.****</p> <p>Val: 12/28</p> <p>CVC: 098</p></button>
                                         </div>
                                         <hr>
                                         <div class="row">
-                                            <input type="checkbox" aria-label="Checkbox for following text input"><p>1234.****.****.****</p> <p>Val: 12/28</p> <p>CVC: 098</p></button>
+                                            <input type="radio" aria-label="Checkbox for following text input" name="cartao"><p>1234.****.****.****</p> <p>Val: 12/28</p> <p>CVC: 098</p></button>
                                         </div>
                                     </div>
                                     <div class="parcelamento">
                                         <ul>
-                                            <li><input type="radio" aria-label="Radio button for following text input">Á vista <strong>R$<%= soma %>,00</strong></li>
-                                            <li><input type="radio" aria-label="Radio button for following text input">2x <strong>R$<%= soma / 2 %>,00</strong></li>
-                                            <li><input type="radio" aria-label="Radio button for following text input">3x <strong>R$<%= soma / 3 %>,00</strong></li>
-                                            <li><input type="radio" aria-label="Radio button for following text input">4x <strong>R$<%= soma / 4 %>,00</strong></li>
-                                            <li><input type="radio" aria-label="Radio button for following text input">5x <strong>R$<%= soma / 5 %>,00</strong></li>
-                                            <li><input type="radio" aria-label="Radio button for following text input">6x <strong>R$<%= soma / 6 %>,00</strong></li>
+                                            <li><input type="radio" id="avistaP" name="formaPagamento" value="á vista, <%= soma+20 %>,00" onclick="avista()">Á vista <strong>R$<%= soma+20 %>,00</strong></li>
+                                            <li><input type="radio" id="avistaD" name="formaPagamento" value="2x no cartão, <%= Math.round((soma+20) / 2) %>,00" onclick="duas()">2x <strong>R$<%= Math.round((soma+20) / 2) %>,00</strong></li>
+                                            <li><input type="radio" id="avistaT" name="formaPagamento" value="3x no cartão, <%= Math.round((soma+20) / 3) %>,00" onclick="tres()">3x <strong>R$<%= Math.round((soma+20) / 3) %>,00</strong></li>
+                                            <li><input type="radio" id="avistaQ" name="formaPagamento" value="4x no cartão, <%= Math.round((soma+20) / 4) %>,00" onclick="quatro()">4x <strong>R$<%= Math.round((soma+20) / 4) %>,00</strong></li>
+                                            <li><input type="radio" id="avistaC" name="formaPagamento" value="5x no cartão, <%= Math.round((soma+20) / 5) %>,00" onclick="cinco()">5x <strong>R$<%= Math.round((soma+20) / 5) %>,00</strong></li>
+                                            <li><input type="radio" id="avistaS" name="formaPagamento" value="6x no cartão, <%= Math.round((soma+20) / 6) %>,00" onclick="seis()">6x <strong>R$<%= Math.round((soma+20) / 6) %>,00</strong></li>
                                         </ul>
                                     </div>
                                 </div>
-                                <button type="submit" class="button-modal">Confirmar</button>
+                                <button type="button" class="button-modal" data-dismiss="modal">Confirmar</button>
                               </div>
+                              </form>
                             </div>
                           </div>
                     </div>
                 </div>
 
                 <div class="finalizar">
-                    <h2>Nº Pedido <mark><%= idFinalizer %></mark></h2>
                     <form action="/finalizar" method="post">
+                        <input type="text" id="pagamento" name="forma_de_pagamento" style="display: none;" readonly value="teste">
+                    <h2>Nº Pedido <mark><%= idFinalizer %></mark></h2>
                         <button type="submit">Finalizar</button>
                     </form>
+
                 </div>
             </div>
         </div>

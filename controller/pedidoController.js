@@ -36,6 +36,7 @@ const pedidoController = {
     storePedido: async(req,res)=>{
         const id = req.session.usuario.id;
         const idEndereco = req.session.usuario.id_endereco;
+        const {forma_de_pagamento, valor, descricao, categoria} = req.body;
 
         let idPedido = idFinalizer;
 
@@ -85,7 +86,7 @@ const pedidoController = {
                     convertTotalPedido = eval(convertTotalPedido);
 
                   await Pedido.create({
-                    id: 15,
+                    id: 11,
                     id_usuario: id,
                     id_produto: id_produtoDb,
                     nome_produto: nome_produtoDb,
@@ -94,6 +95,7 @@ const pedidoController = {
                     valor_total_produto: valor_total_produtoDb,
                     id_endereco: idEndereco,
                     valor_total_pedido: convertTotalPedido + 20,
+                    forma_de_pagamento,
                     createdAt: new Date(),
                     updatedAt: new Date(),
                   });

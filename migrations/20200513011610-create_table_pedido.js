@@ -45,6 +45,10 @@ module.exports = {
     valor_total_pedido:{
       type: Sequelize.STRING,
     },
+    forma_de_pagamento:{
+      type: Sequelize.STRING,
+      allowNull: false,
+    },
     createdAt: Sequelize.DATE,
     updatedAt: Sequelize.DATE,
      });

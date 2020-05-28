@@ -1,12 +1,40 @@
-const Sequelize = require("sequelize");
 
-const {carrinhos} = require("../../models");
+const implantar = document.getElementById('pagamento');
 
+function avista() {
+    let pag = document.getElementById('avistaP').value;
 
-function destroyer(id_carinho){
-    console.log(id_carinho);
-    carrinhos.destroy({
-        where: {id_carrinho: id_carinho}
-    })
+    console.log('selecionado')
+    implantar.value = pag;
 }
 
+function duas() {
+    let pag = document.getElementById('avistaD').value;
+
+    console.log('selecionado')
+    implantar.value = pag;
+}
+function tres() {
+    let pag = document.getElementById('avistaT').value;
+
+    console.log('selecionado')
+    implantar.value = pag;
+}
+function quatro() {
+    let pag = document.getElementById('avistaQ').value;
+
+    console.log('selecionado')
+    implantar.value = pag;
+}
+function cinco() {
+    let pag = document.getElementById('avistaC').value;
+
+    console.log('selecionado')
+    implantar.value = pag;
+}
+function seis() {
+    let pag = document.getElementById('avistaS').value;
+
+    console.log('selecionado')
+    implantar.value = pag;
+}
