@@ -5,7 +5,6 @@ const { produtos } = require("../models");
 const crypto = require("crypto");
 
 
-let idFinalizer = crypto.randomBytes(9).toString('HEX');
 
 
 
@@ -30,15 +29,13 @@ const pedidoController = {
     });
 
 
-      idFinalizer+2;
-      return res.render("finalizar", {usuario: req.session.usuario, quantItens: req.session.count, idFinalizer, title:'Finalizar pedido', soma});
+      return res.render("finalizar", {usuario: req.session.usuario, quantItens: req.session.count, title:'Finalizar pedido', soma});
   },
     storePedido: async(req,res)=>{
         const id = req.session.usuario.id;
         const idEndereco = req.session.usuario.id_endereco;
         const {forma_de_pagamento, valor, descricao, categoria} = req.body;
 
-        let idPedido = idFinalizer;
 
           const quantItens = await carrinhos.count({
             where: {
@@ -86,7 +83,6 @@ const pedidoController = {
                     convertTotalPedido = eval(convertTotalPedido);
 
                   await Pedido.create({
-                    id: 11,
                     id_usuario: id,
                     id_produto: id_produtoDb,
                     nome_produto: nome_produtoDb,
@@ -102,7 +98,6 @@ const pedidoController = {
 
                   // Atualizar produto
 
-                  console.log('cheguei aqui');
 
                   let contador = 2;
 

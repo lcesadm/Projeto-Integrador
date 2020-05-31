@@ -2,10 +2,10 @@ module.exports = (sequelize, DataTypes) => {
     const Pedido = sequelize.define(
         "Pedido", 
         {
-          id:{
-            type: DataTypes.STRING,
-            primaryKey: true,
-            allowNull: false,
+          id_pedido:{
+            type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true,
           }, 
          id_usuario:{
            type: DataTypes.INTEGER,
