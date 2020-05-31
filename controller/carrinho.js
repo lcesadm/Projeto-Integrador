@@ -1,5 +1,4 @@
-const Sequelize = require("sequelize");
-const bcrypt = require("bcryptjs");
+
 const {carrinhos} = require("../models");
 
 

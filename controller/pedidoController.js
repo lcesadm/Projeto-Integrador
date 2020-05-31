@@ -1,8 +1,5 @@
 const Sequelize = require("sequelize");
-const { Pedido } = require("../models");
-const {carrinhos} = require("../models");
-const { produtos } = require("../models");
-const crypto = require("crypto");
+const { produtos,carrinhos,Pedido } = require("../models");
 
 
 

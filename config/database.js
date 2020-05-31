@@ -1,7 +1,7 @@
 module.exports = {
   username: "root",
-  password: null,
-  database: "the_learning_map",
+  password: "1234",
+  database: "learning_map",
   host: "127.0.0.1",
   dialect: "mysql",
   port: 3306

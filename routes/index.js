@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const upload = require("../config/upload");
+const {check,validationResult,body} = require("express-validator")
 
 
 
@@ -18,7 +19,10 @@ const clienteController = require("../controller/clienteController");
 router.get('/', bodyController.home);
 
 router.get('/registro', bodyController.cadastro);
-router.post('/registro', regisController.store);
+router.post('/registro', [
+    check("email").isEmail().withMessage("E-mail obrigatório"),
+    check("password").isLength({min:6}).withMessage("Password como minimo de 6 digitos"),
+], regisController.store);
 
 
 router.get('/carrinho', autenController.validando ,bodyController.carrinho);

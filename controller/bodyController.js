@@ -1,13 +1,6 @@
 const Sequelize = require("sequelize");
 const config = require("../config/database");
-const bcrypt = require("bcryptjs");
-const crypto = require("crypto");
-
-
-const { produtos } = require("../models");
-const {carrinhos} = require("../models");
-const {enderecos} = require("../models");
-const {Pedido} = require("../models");
+const {Pedido,produtos,enderecos,carrinhos} = require("../models");
 
 
 
@@ -30,7 +23,7 @@ const bodyController = {
         return res.render("noticia", {usuario: req.session.usuario, quantItens: req.session.count, title: 'News'});
     },
     cadastro: (_req, res) => {
-        return res.render("cadastro", {title: 'Cadastro'});
+        return res.render("cadastro", {title: "cadastro"});
     },
     
     
