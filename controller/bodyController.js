@@ -1,6 +1,6 @@
 const Sequelize = require("sequelize");
 const config = require("../config/database");
-const {Pedido,produtos,enderecos,carrinhos} = require("../models");
+const {Pedido,produtos,enderecos,carrinhos,mapas} = require("../models");
 
 
 
@@ -106,7 +106,9 @@ const bodyController = {
         return res.render("login",{title: 'Login'});
     },
     
-    mapa: (req, res) => {
+    mapa:  (req, res) => {
+        const locaisDb =  mapas.findAll()
+        console.log(locaisDb)
         return res.render("mapa", {usuario: req.session.usuario, quantItens: req.session.count, title: 'Mapa'});
     },
     paginaAdmin: async(req, res) => {
