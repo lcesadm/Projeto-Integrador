@@ -46,6 +46,7 @@ const registerController = {
 
       return res.redirect("cliente");
     } else {
+      console.log('estou aqui'+listaDeErrors);
       return res.render("cadastro", { errors: listaDeErrors.errors })
     }
 

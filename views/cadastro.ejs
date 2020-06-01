@@ -13,17 +13,19 @@
 
         <% } %>
 
-        <h4>preecha o formulario abaixo</h4>
 
-        <% if(typeof(errors) != "unidefined"){ %>
+        <% if( typeof errors !== 'undefined') {%>
             
             <ul>
-              <% errors.forEach((error)=>{ %>
-                <p class="alert alert-danger" role="alert">Por favor verifique os dados!</p>
+              <% errors.forEach(error=>{ %>
+                <div class="alert alert-info" role="alert">Por favor verifique os dados!</div>
                 <li style="list-style: none;" class=" alert alert-danger" ><%= error.msg %> </li>
             <%  }) %> 
             </ul>
         <% } %>
+
+        <h4>preecha o formulario abaixo</h4>
+
 
         <div class="row">
           <div class="left">
