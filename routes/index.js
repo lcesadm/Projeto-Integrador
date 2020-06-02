@@ -57,6 +57,8 @@ router.get('/logout', bodyController.logout);
 
 
 router.get('/mapa', bodyController.mapa);
+router.post('/mapa', bodyController.mapaSearch);
+
 router.get('/noticia', bodyController.noticia);
 
 router.get('/paginaAdmin', autenController.validando, bodyController.paginaAdmin);

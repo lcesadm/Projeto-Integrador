@@ -107,10 +107,32 @@ const bodyController = {
     },
     
     mapa:  (req, res) => {
-        const locaisDb =  mapas.findAll()
-        console.log(locaisDb)
         return res.render("mapa", {usuario: req.session.usuario, quantItens: req.session.count, title: 'Mapa'});
     },
+    mapaSearch:  (req, res) => {
+      let tipos = req.body;
+      const {tipo, wifi, livro, cafeteria, mesas, computadores,tomadas} = req.body;
+
+      // console.log(tipos)
+
+      
+
+      console.log(key);
+
+
+
+      const achado =  mapas.findAll({
+        where:{
+          key
+      }
+      });
+
+      // console.log(dados);
+
+
+
+      return res.render("mapa", {usuario: req.session.usuario, quantItens: req.session.count, title: 'Mapa'});
+  },
     paginaAdmin: async(req, res) => {
       const con = new Sequelize(config);
       let id = req.session.usuario.id;
