@@ -25,6 +25,24 @@ module.exports = (sequelize, Datatypes) => {
             type: Datatypes.STRING,
             allowNull: false,
         },
+        wifi:{
+            type: Datatypes.INTEGER,
+          },
+          livro:{
+            type: Datatypes.INTEGER,
+          },
+          cafeteria:{
+            type: Datatypes.INTEGER,
+          },
+          mesas:{
+            type: Datatypes.INTEGER,
+          },
+          computadores:{
+            type: Datatypes.INTEGER,
+          },
+          tomadas:{
+            type: Datatypes.INTEGER,
+          },
         // ceatedAt: Datatypes.DATE,
         // updatedAt: Datatypes.DATE,
     })

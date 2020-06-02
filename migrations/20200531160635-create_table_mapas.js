@@ -28,6 +28,24 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      wifi:{
+        type: Sequelize.INTEGER,
+      },
+      livro:{
+        type: Sequelize.INTEGER,
+      },
+      cafeteria:{
+        type: Sequelize.INTEGER,
+      },
+      mesas:{
+        type: Sequelize.INTEGER,
+      },
+      computadores:{
+        type: Sequelize.INTEGER,
+      },
+      tomadas:{
+        type: Sequelize.INTEGER,
+      },
       createdAt: Sequelize.DATE,
       updatedAt: Sequelize.DATE,
     });
