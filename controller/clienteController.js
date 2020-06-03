@@ -8,7 +8,7 @@ const { usuarios, enderecos } = require("../models");
 const clienteController = {
   updateE: async (req, res) => {
     const { cep, logradouro, uf, cidade, bairro, numero, complemento } = req.body;
-    let id = req.session.usuario.id;
+    const id = req.session.usuario.id;
 
     const enderecoDb = await enderecos.findAll(
       {
@@ -79,9 +79,28 @@ const clienteController = {
         }
       });
 
+      
+
     }
 
 
+    const [usuarioSessisonUpdate] = await usuarios.findAll({
+          
+      where: {
+        id_usuario: id
+      }
+      
+    });
+
+  req.session.usuario = {
+    id: usuarioSessisonUpdate.id_usuario,
+    nome: usuarioSessisonUpdate.nome,
+    email: usuarioSessisonUpdate.email,
+    CPF: usuarioSessisonUpdate.CPF,
+    id_endereco: usuarioSessisonUpdate.id_endereco,
+    nascimento: usuarioSessisonUpdate.nascimento,
+    sexo: usuarioSessisonUpdate.sexo,
+  };
 
     return res.redirect("/cliente");
   },
@@ -123,6 +142,25 @@ const clienteController = {
         id_usuario: id
       }
     });
+
+    const [usuarioSessisonUpdate] = await usuarios.findAll({
+          
+      where: {
+        id_usuario: id
+      }
+      
+  });
+
+  req.session.usuario = {
+    id: usuarioSessisonUpdate.id_usuario,
+    nome: usuarioSessisonUpdate.nome,
+    email: usuarioSessisonUpdate.email,
+    CPF: usuarioSessisonUpdate.CPF,
+    nascimento: usuarioSessisonUpdate.nascimento,
+    sexo: usuarioSessisonUpdate.sexo,
+  };
+
+    
 
 
 

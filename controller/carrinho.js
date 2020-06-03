@@ -70,6 +70,16 @@ const carrinhoController = {
     }
     
 
+        count = await carrinhos.count({
+          where: {
+            id_usuario: id
+          }
+        })
+
+        req.session.count = {
+          count: count,
+        };
+
         
 
             return res.redirect("/carrinho");
@@ -89,6 +99,17 @@ const carrinhoController = {
                     id_usuario: id,
                 }
             });
+
+
+        count = await carrinhos.count({
+          where: {
+            id_usuario: id
+          }
+        })
+
+        req.session.count = {
+          count: count,
+        };
 
             return res.redirect("/carrinho");
         }

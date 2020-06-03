@@ -87,6 +87,7 @@ if (!("erro" in conteudo)) {
 else {
     //CEP não Encontrado.
     limpa_formulário_cep();
+    document.getElementById('viacep').innerHTML= '<div class="alert alert-info" role="alert">CEP não encontrado!</div>'
     alert("CEP não encontrado.");
 }
 }
