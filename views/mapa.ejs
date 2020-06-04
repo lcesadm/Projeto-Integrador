@@ -9,7 +9,7 @@
                 <div class="col-6 fil-left">
                     <form action="/mapa" method="post">
                     <p>Tipos de ambientes que gostaria de estudar:</p>
-                    <select class="form-control" id="exampleInputCountry" name="tipo">
+                    <select class="form-control" id="exampleInputCountry" name="tipoLocal">
                         <option value="" selected="selected">Selecione um tipo</option>
                         <option value="cafeteria">Cafeteria</option>
                         <option value="biblioteca">Biblioteca</option>
@@ -60,26 +60,37 @@
                                 <label class="form-check-label" for="Tomadas">Tomadas</label>
                             </div>
                         </div>
-                        <button type="submit">Pesquisar</button>
+                        <button type="submit" class="subMap">Pesquisar</button>
                     </div>
                     </form>
                 </div>
             </div>
+            <% if(typeof achado === 'undefined') {%>
+
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14624.191902814306!2d-46.6753419!3d-23.6026123!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x739f0ddb0439cf94!2sDigital%20House%20S%C3%A3o%20Paulo!5e0!3m2!1spt-BR!2sbr!4v1586821169639!5m2!1spt-BR!2sbr" width="100%" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 
-            <h1 id="map-locais-left">LOCAIS ENCONTRADOS:</h1>
-            <div class="row locais">
-                <h1>Google Space - Campus SP</h1>
-                <p> R. Cel. Oscar Porto, 70, Paraíso, s/ tel. </p>
-                <button type="submit">Convidar pessoas</button>
-                <hr>
-            </div>
-            <div class="row locais">
-                <h1>Google Space - Campus SP</h1>
-                <p> R. Cel. Oscar Porto, 70, Paraíso, s/ tel. </p>
-                <button type="submit">Convidar pessoas</button>
-                <hr>
-            </div>
+            <% }else{ %> 
+
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14624.191902814306!2d-46.6753419!3d-23.6026123!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x739f0ddb0439cf94!2sDigital%20House%20S%C3%A3o%20Paulo!5e0!3m2!1spt-BR!2sbr!4v1586821169639!5m2!1spt-BR!2sbr" width="100%" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+
+                <% achado.forEach(element => { %>
+                     
+               
+                <h1 id="map-locais-left">LOCAIS ENCONTRADOS:</h1>
+
+
+                    <div class="row locais">
+                        <h1><%= element.nome %></h1>
+                        <p> <%= element.endereco %> </p>
+                        <!-- <button type="submit">Convidar pessoas</button> -->
+                        <hr>
+                    </div>
+                    <% }) %> 
+
+             <% } %> 
+
 
         </div>
 

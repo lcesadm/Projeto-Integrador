@@ -25,8 +25,15 @@ const pedidoController = {
       
     });
 
+    let descri= "";
+    varTotal.forEach(element => {
+      descri += ` ${element.nome_produto},`;
+      
+    });
 
-      return res.render("finalizar", {usuario: req.session.usuario, quantItens: req.session.count, title:'Finalizar pedido', soma});
+    console.log(descri);
+
+      return res.render("finalizar", {usuario: req.session.usuario, quantItens: req.session.count, title:'Finalizar pedido', soma, descri});
   },
     storePedido: async(req,res)=>{
         const id = req.session.usuario.id;

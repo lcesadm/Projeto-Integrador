@@ -109,29 +109,37 @@ const bodyController = {
     mapa:  (req, res) => {
         return res.render("mapa", {usuario: req.session.usuario, quantItens: req.session.count, title: 'Mapa'});
     },
-    mapaSearch:  (req, res) => {
+    mapaSearch:  async(req, res) => {
       let tipos = req.body;
-      const {tipo, wifi, livro, cafeteria, mesas, computadores,tomadas} = req.body;
+      const {tipoLocal, wifi, livro, cafeteria, mesas, computadores,tomadas} = req.body;
 
-      // console.log(tipos)
+
+      let where = {};
+
+      let addObj = {tipo: tipoLocal};
+      let buscaLocal = Object.assign(where,addObj);
+
+      for (const key in req.body) {
+        if(key == "tipoLocal"){
+          continue
+        }
+        if(req.body[key] != undefined){
+          where[key] = 1
+        }
+      };
 
       
 
-      console.log(key);
-
-
-
-      const achado =  mapas.findAll({
-        where:{
-          key
-      }
+      let achado = await mapas.findAll({
+        where
       });
 
-      // console.log(dados);
+      achado.forEach(element => {
+        console.log("Nome "+element.nome);
+      });
 
 
-
-      return res.render("mapa", {usuario: req.session.usuario, quantItens: req.session.count, title: 'Mapa'});
+      return res.render("mapa", {usuario: req.session.usuario, quantItens: req.session.count, title: 'Mapa', achado});
   },
     paginaAdmin: async(req, res) => {
       const con = new Sequelize(config);

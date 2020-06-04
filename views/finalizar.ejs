@@ -24,16 +24,27 @@
 
                                 <h2>Selecione seu cartão</h2>
                                 <div class="row">
-                                    <div class="cartao">
-                                        <div class="row">
-                                            <input type="radio" aria-label="Checkbox for following text input" name="cartao"><p>1234.****.****.****</p> <p>Val: 12/28</p> <p>CVC: 098</p></button>
-                                        </div>
-                                        <hr>
-                                        <div class="row">
-                                            <input type="radio" aria-label="Checkbox for following text input" name="cartao"><p>1234.****.****.****</p> <p>Val: 12/28</p> <p>CVC: 098</p></button>
-                                        </div>
+                                    <div class="cartaoPai">
+                                            <label for="cartao">Digite o numero do seu cartao:</label>
+                                            <br>
+                                            <input type="text" aria-label="Checkbox for following text input" maxlength="19" name="cartao"onkeypress="$(this).mask('####.####.####.####')">
+                                            <br>
+                                            <label for="validade">Digite sua validade:</label>
+                                            <br>
+                                            <input type="text" aria-label="Checkbox for following text input" maxlength="4" name="validade"onkeypress="$(this).mask('####')">
+                                            <br>
+                                            <label for="cvc">Digite cvc</label>
+                                            <br>
+                                            <input type="text" aria-label="Checkbox for following text input" maxlength="3" name="cvc"onkeypress="$(this).mask('###')"> 
+                                            <br>
+                                            <label for="cvc">Digite o nome impresso no cartao</label>
+                                            <br>
+                                            <input type="text" aria-label="Checkbox for following text input"  name="nome"onkeypress="$(this).mask('###')"> 
+                                        
+                                            
                                     </div>
                                     <div class="parcelamento">
+                                        <h5>Selecione a forma de pagamento</h5>
                                         <ul>
                                             <li><input type="radio" id="avistaP" name="formaPagamento" value="á vista, <%= soma+20 %>,00" onclick="avista()">Á vista <strong>R$<%= soma+20 %>,00</strong></li>
                                             <li><input type="radio" id="avistaD" name="formaPagamento" value="2x no cartão, <%= Math.round((soma+20) / 2) %>,00" onclick="duas()">2x <strong>R$<%= Math.round((soma+20) / 2) %>,00</strong></li>
